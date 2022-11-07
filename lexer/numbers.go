@@ -2,11 +2,9 @@ package lexer
 
 import (
 	"unicode"
-
-	"github.com/kianooshaz/paca/reader"
 )
 
-func LexNumber(r rune) (string, error) {
+func (l lexer) LexNumber(r rune) (string, error) {
 	var str string
 	var hasDot bool
 	var hasE bool
@@ -15,7 +13,7 @@ func LexNumber(r rune) (string, error) {
 	for {
 		if r == '.' {
 			if hasDot || hasE {
-				reader.UnreadRune() //reject
+				l.buffer.UnreadRune()
 				break
 			}
 			hasDot = true
