@@ -3,6 +3,7 @@ package lexer
 import (
 	"bufio"
 	"fmt"
+	"log"
 	"strings"
 
 	"github.com/kianooshaz/paca/tokens"
@@ -19,6 +20,15 @@ func New(source string) *lexer {
 		buffer: buffer,
 		tokens: make([]tokens.Token, 0),
 	}
+}
+
+func (l lexer) Lex() {
+	r, _, err := l.buffer.ReadRune()
+	if err != nil {
+		log.Fatal("lex error")
+	}
+
+	fmt.Println(l.LexString(r))
 }
 
 func (l *lexer) emit(t tokens.Type, v string) {
