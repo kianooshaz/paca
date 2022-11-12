@@ -4,28 +4,26 @@ import (
 	"github.com/kianooshaz/paca/tokens"
 )
 
-func (l lexer) LexSymbol(r rune) (tokens.Token, error) {
-
+func (l lexer) LexSymbol(r rune) {
 	symbol, ok := tokens.Symbols[string(r)]
-
 	if !ok {
-		return tokens.Token{}, nil
+		panic("invalid symbol") // TODO refactor message
 	}
 
 	totalRunes := string(r)
+
 	for ok && symbol.IsNextRequire {
-		r, _, err := l.buffer.ReadRune()
-		if err != nil {
+		r, _, _ := l.buffer.ReadRune()
+
+		s, ok := tokens.Symbols[totalRunes+string(r)]
+		if !ok {
+			l.buffer.UnreadRune()
 			break
 		}
-		symbol, ok = tokens.Symbols[totalRunes+string(r)]
-		if ok {
-			totalRunes += string(r)
-		}
+
+		symbol = s
+		totalRunes += string(r)
 	}
 
-	return tokens.Token{
-		Type:  "symbol", 
-		Value: string(symbol.Name),
-	}, nil
+	l.emit(symbol.Name, totalRunes)
 }
