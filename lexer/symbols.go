@@ -10,7 +10,7 @@ func (l *lexer) lexSymbol(r rune) {
 		panic("invalid symbol") // TODO refactor message
 	}
 
-	totalRunes := string(r)
+	var totalRunes = string(r)
 
 	for ok && symbol.HasNext {
 		r, _, _ := l.buffer.ReadRune()
