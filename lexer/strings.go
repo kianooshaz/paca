@@ -1,27 +1,14 @@
 package lexer
 
 import (
-	"errors"
-
 	"github.com/kianooshaz/paca/tokens"
 )
 
-// func (l lexer) LexString1(r rune) {
-// 	str, _ := l.buffer.ReadString('"')
-// 	str = strings.TrimRight(str, `"`)
-// 	fmt.Println(str, len(str))
-// }
-
-func (l *lexer) lexString(r rune) (tokens.Token, error) {
+func (l *lexer) lexString(r rune) {
 	str := string(r)
 	for {
 		prevRune := r
-		var err error
-		r, _, err = l.buffer.ReadRune()
-		if err != nil {
-			l.buffer.UnreadRune()
-			return tokens.Token{}, errors.New("invalid string")
-		}
+		r, _, _ = l.buffer.ReadRune()
 
 		if prevRune == '\\' {
 			if r == '\\' {
@@ -37,5 +24,6 @@ func (l *lexer) lexString(r rune) (tokens.Token, error) {
 			break
 		}
 	}
-	return tokens.Token{Type: "string", Value: str}, nil
+
+	l.emit(tokens.STRING, str)
 }
