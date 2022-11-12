@@ -23,12 +23,12 @@ func (l lexer) LexString(r rune) (tokens.Token, error) {
 			return tokens.Token{}, errors.New("invalid string")
 		}
 
-		if r == '\\' {
-			if prevRune == '\\' {
+		if prevRune == '\\' {
+			if r == '\\' {
 				str += string(r)
-				r = ' '
+				r = rune(0)
+				continue
 			}
-			continue
 		}
 
 		str += string(r)
