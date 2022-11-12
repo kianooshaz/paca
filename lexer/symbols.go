@@ -4,7 +4,7 @@ import (
 	"github.com/kianooshaz/paca/tokens"
 )
 
-func (l lexer) LexSymbol(r rune) {
+func (l *lexer) lexSymbol(r rune) {
 	symbol, ok := tokens.Symbols[string(r)]
 	if !ok {
 		panic("invalid symbol") // TODO refactor message

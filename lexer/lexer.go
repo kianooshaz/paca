@@ -40,7 +40,7 @@ func (l *lexer) lex() {
 	case unicode.IsLetter(r):
 		// l.lexIdent(r)
 	default:
-		// l.lexSymbol(r)
+		l.lexSymbol(r)
 	}
 
 	l.lex()
