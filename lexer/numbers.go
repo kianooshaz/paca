@@ -21,16 +21,16 @@ func (l lexer) LexNumber(r rune) (string, error) {
 
 		if r == 'E' {
 			var r1, r2 rune
-			r1, err = reader.ReadRune()
+			r1, _, err = l.buffer.ReadRune()
 			if err != nil {
-				reader.UnreadRune()
+				l.buffer.UnreadRune()
 				break
 			}
 			if r1 == '+' || r1 == '-' {
-				r2, err = reader.ReadRune()
+				r2, _, err = l.buffer.ReadRune()
 				if err != nil || !unicode.IsDigit(r2) {
-					reader.UnreadRune()
-					reader.UnreadRune()
+					l.buffer.UnreadRune()
+					l.buffer.UnreadRune()
 					break
 				}
 				str += string(r) + string(r1) + string(r2)
@@ -45,9 +45,9 @@ func (l lexer) LexNumber(r rune) (string, error) {
 			str += string(r)
 		}
 
-		r, err = reader.ReadRune()
+		r, _, err = l.buffer.ReadRune()
 		if err != nil {
-			reader.UnreadRune()
+			l.buffer.UnreadRune()
 			break
 		}
 	}
