@@ -2,54 +2,55 @@ package lexer
 
 import (
 	"unicode"
+
+	"github.com/kianooshaz/paca/tokens"
 )
 
-func (l lexer) LexNumber(r rune) (string, error) {
+func (l *lexer) lexNumber(r rune) {
+	var token = tokens.INT
 	var str string
-	var hasDot bool
-	var hasE bool
-	var err error
-
+	// 3.22E+
 	for {
-		if r == '.' {
-			if hasDot || hasE {
+		if r == 'E' {
+			if token == tokens.ENUMS {
 				l.buffer.UnreadRune()
 				break
 			}
-			hasDot = true
-		}
 
-		if r == 'E' {
-			var r1, r2 rune
-			r1, err = reader.ReadRune()
-			if err != nil {
-				reader.UnreadRune()
-				break
-			}
+			r1, _, _ := l.buffer.ReadRune()
 			if r1 == '+' || r1 == '-' {
-				r2, err = reader.ReadRune()
-				if err != nil || !unicode.IsDigit(r2) {
-					reader.UnreadRune()
-					reader.UnreadRune()
+				r2, _, _ := l.buffer.ReadRune()
+				if !unicode.IsDigit(r2) {
+					l.buffer.UnreadRune()
+					l.buffer.UnreadRune()
 					break
 				}
-				str += string(r) + string(r1) + string(r2)
+				str += string(r) + string(r1) + string(r2) // str = str + "E+3"
+			} else if unicode.IsDigit(r1) {
+				str += string(r) + string(r1) // str = str + "E3"
+			} else {
+				l.buffer.UnreadRune()
+				break
 			}
-			if unicode.IsDigit(r1) {
-				str += string(r) + string(r1)
-			}
-			hasE = true
-		}
 
-		if unicode.IsDigit(r) || r == '.' {
+			token = tokens.ENUMS
+		} else if r == '.' {
+			if token == tokens.FLOAT || token == tokens.ENUMS {
+				l.buffer.UnreadRune()
+				break
+			}
+
+			token = tokens.FLOAT
 			str += string(r)
-		}
-
-		r, err = reader.ReadRune()
-		if err != nil {
-			reader.UnreadRune()
+		} else if unicode.IsDigit(r) {
+			str += string(r)
+		} else {
+			l.buffer.UnreadRune()
 			break
 		}
+
+		r, _, _ = l.buffer.ReadRune()
 	}
-	return str, nil
+
+	l.emit(token, str)
 }

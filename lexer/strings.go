@@ -12,7 +12,7 @@ import (
 // 	fmt.Println(str, len(str))
 // }
 
-func (l lexer) LexString(r rune) (tokens.Token, error) {
+func (l *lexer) lexString(r rune) (tokens.Token, error) {
 	str := string(r)
 	for {
 		prevRune := r
