@@ -12,7 +12,7 @@ func (l lexer) LexSymbol(r rune) {
 
 	totalRunes := string(r)
 
-	for ok && symbol.IsNextRequire {
+	for ok && symbol.HasNext {
 		r, _, _ := l.buffer.ReadRune()
 
 		s, ok := tokens.Symbols[totalRunes+string(r)]

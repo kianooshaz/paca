@@ -2,32 +2,32 @@ package tokens
 
 type Symbol struct {
 	Name          Type
-	IsNextRequire bool
+	HasNext bool
 }
 
 // list of symbols
 var Symbols = map[string]Symbol{
-	"-": {Name: MINUS, IsNextRequire: false},
-	"+": {Name: PLUS, IsNextRequire: false},
-	"*": {Name: STAR, IsNextRequire: false},
-	"/": {Name: SLASH, IsNextRequire: false},
+	"-": {Name: MINUS, HasNext: false},
+	"+": {Name: PLUS, HasNext: false},
+	"*": {Name: STAR, HasNext: false},
+	"/": {Name: SLASH, HasNext: false},
 
-	"(": {Name: LPARENT, IsNextRequire: false},
-	")": {Name: RPARENT, IsNextRequire: false},
-	"[": {Name: LBRACKET, IsNextRequire: false},
-	"]": {Name: RBRACKET, IsNextRequire: false},
+	"(": {Name: LPARENT, HasNext: false},
+	")": {Name: RPARENT, HasNext: false},
+	"[": {Name: LBRACKET, HasNext: false},
+	"]": {Name: RBRACKET, HasNext: false},
 
-	">":  {Name: GT, IsNextRequire: true},
-	">=": {Name: GE, IsNextRequire: false},
+	">":  {Name: GT, HasNext: true},
+	">=": {Name: GE, HasNext: false},
 
-	"<":  {Name: LT, IsNextRequire: true},
-	"<=": {Name: LE, IsNextRequire: false},
-	"<>": {Name: NE, IsNextRequire: false},
+	"<":  {Name: LT, HasNext: true},
+	"<=": {Name: LE, HasNext: false},
+	"<>": {Name: NE, HasNext: false},
 
-	":":  {Name: COLON, IsNextRequire: true},
-	":=": {Name: ASSIGN, IsNextRequire: false},
+	":":  {Name: COLON, HasNext: true},
+	":=": {Name: ASSIGN, HasNext: false},
 
-	"=": {Name: EQ, IsNextRequire: false},
-	",": {Name: COMMA, IsNextRequire: false},
-	";": {Name: SEMICOLON, IsNextRequire: false},
+	"=": {Name: EQ, HasNext: false},
+	",": {Name: COMMA, HasNext: false},
+	";": {Name: SEMICOLON, HasNext: false},
 }
