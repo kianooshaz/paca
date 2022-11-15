@@ -9,7 +9,6 @@ import (
 func (l *lexer) lexNumber(r rune) {
 	var token = tokens.INT
 	var str string
-	// 3.22E+
 	for {
 		if r == 'E' {
 			if token == tokens.ENUMS {

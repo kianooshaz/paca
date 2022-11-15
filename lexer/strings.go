@@ -1,14 +1,21 @@
 package lexer
 
 import (
+	"io"
+
 	"github.com/kianooshaz/paca/tokens"
 )
 
 func (l *lexer) lexString(r rune) {
-	str := string(r)
+	var str string
+	var err error
+
 	for {
 		prevRune := r
-		r, _, _ = l.buffer.ReadRune()
+		r, _, err = l.buffer.ReadRune()
+		if err == io.EOF {
+			panic("String not finished error")
+		}
 
 		if prevRune == '\\' {
 			if r == '\\' {
@@ -18,11 +25,11 @@ func (l *lexer) lexString(r rune) {
 			}
 		}
 
-		str += string(r)
-
 		if r == '"' && prevRune != '\\' {
 			break
 		}
+
+		str += string(r)
 	}
 
 	l.emit(tokens.STRING, str)
