@@ -11,7 +11,7 @@ func (l *lexer) lexNumber(r rune) {
 	var str string
 	for {
 		if r == 'E' {
-			if token == tokens.ENUMS {
+			if token == tokens.SCIENTIFIC {
 				l.buffer.UnreadRune()
 				break
 			}
@@ -32,9 +32,17 @@ func (l *lexer) lexNumber(r rune) {
 				break
 			}
 
-			token = tokens.ENUMS
+			token = tokens.SCIENTIFIC
 		} else if r == '.' {
-			if token == tokens.FLOAT || token == tokens.ENUMS {
+			r2, _, _ := l.buffer.ReadRune()
+			if r2 == '.' {
+				l.emit(token, str)
+				l.emit(tokens.DOTDOT, "..")
+				return
+			}
+			l.buffer.UnreadRune()
+
+			if token == tokens.FLOAT || token == tokens.SCIENTIFIC {
 				l.buffer.UnreadRune()
 				break
 			}

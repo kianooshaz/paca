@@ -31,19 +31,25 @@ func TestLexNumber(t *testing.T) {
 			desc:       "three",
 			firstDigit: '1',
 			buffer:     `.234E12`,
-			want:       tokens.Token{Type: tokens.ENUMS, Value: `1.234E12`},
+			want:       tokens.Token{Type: tokens.SCIENTIFIC, Value: `1.234E12`},
 		},
 		{
 			desc:       "four",
 			firstDigit: '1',
 			buffer:     `.234E+12`,
-			want:       tokens.Token{Type: tokens.ENUMS, Value: `1.234E+12`},
+			want:       tokens.Token{Type: tokens.SCIENTIFIC, Value: `1.234E+12`},
 		},
 		{
 			desc:       "five",
 			firstDigit: '1',
 			buffer:     `.234E-12`,
-			want:       tokens.Token{Type: tokens.ENUMS, Value: `1.234E-12`},
+			want:       tokens.Token{Type: tokens.SCIENTIFIC, Value: `1.234E-12`},
+		},
+		{
+			desc:       "six",
+			firstDigit: '1',
+			buffer:     `2345..466`,
+			want:       tokens.Token{Type: tokens.INT, Value: "12345"},
 		},
 	}
 	for _, tC := range testCases {
