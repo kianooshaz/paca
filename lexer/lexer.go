@@ -12,7 +12,6 @@ import (
 
 type lexer struct {
 	buffer *bufio.Reader
-	line   int
 	tokens []tokens.Token
 }
 
@@ -20,7 +19,6 @@ func New(source string) *lexer {
 	buffer := bufio.NewReader(strings.NewReader(source))
 	l := &lexer{
 		buffer: buffer,
-		line:   0,
 		tokens: make([]tokens.Token, 0),
 	}
 	l.lex()
@@ -30,20 +28,21 @@ func New(source string) *lexer {
 func (l *lexer) lex() {
 	r, _, err := l.buffer.ReadRune()
 	if err == io.EOF {
-		l.emit(tokens.EOF, "")
+		l.emit(tokens.EOF, "EOF")
 		return
 	}
 
 	switch {
-	// space or tab
-	case r == rune(32) || r == rune(9):
+	// space or tab or new line
+	case r == rune(32) || r == rune(9) || r == rune(10):
 		break
-	case r == '"':
+	case r == rune(39):
+		// 39 = '
 		l.lexString(r)
 	case unicode.IsDigit(r):
 		l.lexNumber(r)
 	case unicode.IsLetter(r):
-		// l.lexIdent(r)
+		l.lexIdent(r)
 	default:
 		l.lexSymbol(r)
 	}

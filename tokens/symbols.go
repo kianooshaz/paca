@@ -12,7 +12,7 @@ var Symbols = map[string]Symbol{
 	"*": {Name: STAR, HasNext: false},
 	"/": {Name: SLASH, HasNext: false},
 
-	"(": {Name: LPARENT, HasNext: false},
+	"(": {Name: LPARENT, HasNext: true},
 	")": {Name: RPARENT, HasNext: false},
 	"[": {Name: LBRACKET, HasNext: false},
 	"]": {Name: RBRACKET, HasNext: false},
@@ -30,4 +30,5 @@ var Symbols = map[string]Symbol{
 	"=": {Name: EQ, HasNext: false},
 	",": {Name: COMMA, HasNext: false},
 	";": {Name: SEMICOLON, HasNext: false},
+	".": {Name: DOT, HasNext: true},
 }

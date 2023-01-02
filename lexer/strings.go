@@ -16,7 +16,7 @@ func (l *lexer) lexString(r rune) {
 			panic("String not finished error")
 		}
 
-		if r == '"' {
+		if r == rune(39) {
 			break
 		}
 

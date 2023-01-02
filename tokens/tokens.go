@@ -42,7 +42,7 @@ const (
 	VAR        Type = "var"
 	DOT        Type = "."
 	PROGRAM    Type = "program"
-	END1       Type = "end."
+	ENDSTOP    Type = "end."
 	DOWNTO     Type = "downto"
 	TO         Type = "to"
 	FOR        Type = "for"
@@ -52,4 +52,5 @@ const (
 	SCIENTIFIC Type = "Scientific"
 	STRING     Type = "string"
 	BOOLEAN    Type = "boolean"
+	IDENT      Type = "ident"
 )

@@ -29,4 +29,5 @@ var Keywords = map[string]Type{
 	"float":     FLOAT,
 	"string":    STRING,
 	"boolean":   BOOLEAN,
+	"div":       DIV,
 }
