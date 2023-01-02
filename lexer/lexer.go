@@ -33,6 +33,8 @@ func (l *lexer) lex() {
 	}
 
 	switch {
+	case r == rune(32):
+		l.lex()
 	case r == '"':
 		l.lexString(r)
 	case unicode.IsDigit(r):
