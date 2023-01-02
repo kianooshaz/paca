@@ -9,3 +9,6 @@ find-min:
 
 ex-procedure:
 	go run main.go tests/ex_procedure.pas
+
+recursive-fibonacci:
+	go run main.go tests/recursive_fibonacci.pas
