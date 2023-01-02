@@ -38,9 +38,6 @@ func (l *lexer) lex() {
 	// space or tab
 	case r == rune(32) || r == rune(9):
 		break
-	// new line
-	case r == rune(10):
-		l.line++
 	case r == '"':
 		l.lexString(r)
 	case unicode.IsDigit(r):
