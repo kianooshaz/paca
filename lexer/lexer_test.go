@@ -22,7 +22,7 @@ func Test(t *testing.T) {
 			source: `"hello world" 10`,
 			tokens: []tokens.Token{
 				{Type: tokens.STRING, Value: "hello world"},
-				{Type: tokens.INT, Value: "10"},
+				{Type: tokens.INTEGER, Value: "10"},
 			},
 		},
 		{
