@@ -1,7 +1,7 @@
 package tokens
 
 type Symbol struct {
-	Name          Type
+	Name    Type
 	HasNext bool
 }
 

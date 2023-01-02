@@ -7,30 +7,21 @@ import (
 )
 
 func (l *lexer) lexString(r rune) {
-	var str string
+	var value string
 	var err error
 
 	for {
-		prevRune := r
 		r, _, err = l.buffer.ReadRune()
 		if err == io.EOF {
 			panic("String not finished error")
 		}
 
-		if prevRune == '\\' {
-			if r == '\\' {
-				str += string(r)
-				r = rune(0)
-				continue
-			}
-		}
-
-		if r == '"' && prevRune != '\\' {
+		if r == '"' {
 			break
 		}
 
-		str += string(r)
+		value += string(r)
 	}
 
-	l.emit(tokens.STRING, str)
+	l.emit(tokens.STRING, value)
 }

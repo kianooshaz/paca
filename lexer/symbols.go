@@ -1,29 +1,41 @@
 package lexer
 
 import (
+	"log"
+
 	"github.com/kianooshaz/paca/tokens"
 )
 
 func (l *lexer) lexSymbol(r rune) {
 	symbol, ok := tokens.Symbols[string(r)]
 	if !ok {
-		panic("invalid symbol") // TODO refactor message
+		log.Fatalf("syntax error: line (%d): character (%s)", l.line, string(r))
 	}
 
-	var totalRunes = string(r)
+	if r == rune(47) {
+		rr, _, _ := l.buffer.ReadRune()
+		if rr == rune(47) {
+			// comment
+			l.buffer.ReadLine()
+			return
+		}
+		l.buffer.UnreadRune()
+	}
+
+	value := string(r)
 
 	for ok && symbol.HasNext {
-		r, _, _ := l.buffer.ReadRune()
+		r, _, _ = l.buffer.ReadRune()
 
-		s, ok := tokens.Symbols[totalRunes+string(r)]
+		s, ok := tokens.Symbols[value+string(r)]
 		if !ok {
 			l.buffer.UnreadRune()
 			break
 		}
 
 		symbol = s
-		totalRunes += string(r)
+		value += string(r)
 	}
 
-	l.emit(symbol.Name, totalRunes)
+	l.emit(symbol.Name, value)
 }
