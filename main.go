@@ -1,11 +1,13 @@
 package main
 
 import (
+	"fmt"
 	"log"
 	"os"
 	"strings"
 
 	"github.com/kianooshaz/paca/lexer"
+	"github.com/kianooshaz/paca/tokens"
 )
 
 func main() {
@@ -19,6 +21,11 @@ func main() {
 	}
 	str := string(input)
 	str = strings.NewReplacer(`\n`, "\n", `\t`, "\t", `\r`, "\r").Replace(str)
-	l := lexer.New(str)
+	it := tokens.NewIdentTable()
+	l := lexer.New(str, it)
+
+	fmt.Println("########## idents table ##########")
+	l.PrintIdentTable()
+	fmt.Println("########## tokens ##########")
 	l.PrintTokens()
 }

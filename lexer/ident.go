@@ -29,6 +29,7 @@ func (l *lexer) lexIdent(r rune) {
 		}
 		l.emit(t, value)
 	} else {
-		l.emit(tokens.IDENT, value)
+		id := l.identTable.GetID(value)
+		l.emit(tokens.IDENT, id)
 	}
 }

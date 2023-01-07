@@ -11,15 +11,17 @@ import (
 )
 
 type lexer struct {
-	buffer *bufio.Reader
-	tokens []tokens.Token
+	buffer     *bufio.Reader
+	identTable *tokens.IdentTable
+	tokens     []tokens.Token
 }
 
-func New(source string) *lexer {
+func New(source string, identTable *tokens.IdentTable) *lexer {
 	buffer := bufio.NewReader(strings.NewReader(source))
 	l := &lexer{
-		buffer: buffer,
-		tokens: make([]tokens.Token, 0),
+		buffer:     buffer,
+		identTable: identTable,
+		tokens:     make([]tokens.Token, 0),
 	}
 	l.lex()
 	return l
@@ -58,4 +60,8 @@ func (l *lexer) PrintTokens() {
 	for _, token := range l.tokens {
 		fmt.Println(token)
 	}
+}
+
+func (l *lexer) PrintIdentTable() {
+	l.identTable.Print()
 }
