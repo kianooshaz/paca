@@ -1,7 +1,7 @@
 {
-    "states[0].kernel": [
+    "0.kernel": [
         {
-            "Lookahead": "states[0].kernel",
+            "Lookahead": "0.kernel",
             "Production": ""
         },
         {
@@ -13,9 +13,9 @@
             "Production": "P' -> . P"
         }
     ],
-    "states[1].kernel": [
+    "1.kernel": [
         {
-            "Lookahead": "states[1].kernel",
+            "Lookahead": "1.kernel",
             "Production": ""
         },
         {
@@ -27,9 +27,9 @@
             "Production": "P' -> P ."
         }
     ],
-    "states[2].kernel": [
+    "2.kernel": [
         {
-            "Lookahead": "states[2].kernel",
+            "Lookahead": "2.kernel",
             "Production": ""
         },
         {
@@ -41,9 +41,9 @@
             "Production": "P -> program . id output ; declarations subprogram_declaration begin optional_statment end."
         }
     ],
-    "states[3].kernel": [
+    "3.kernel": [
         {
-            "Lookahead": "states[3].kernel",
+            "Lookahead": "3.kernel",
             "Production": ""
         },
         {
@@ -55,9 +55,9 @@
             "Production": "P -> program id . output ; declarations subprogram_declaration begin optional_statment end."
         }
     ],
-    "states[3].epsilon": [
+    "3.epsilon": [
         {
-            "Lookahead": "states[3].epsilon",
+            "Lookahead": "3.epsilon",
             "Production": ""
         },
         {
@@ -69,9 +69,9 @@
             "Production": "output -> ."
         }
     ],
-    "states[4].kernel": [
+    "4.kernel": [
         {
-            "Lookahead": "states[4].kernel",
+            "Lookahead": "4.kernel",
             "Production": ""
         },
         {
@@ -83,9 +83,9 @@
             "Production": "P -> program id output . ; declarations subprogram_declaration begin optional_statment end."
         }
     ],
-    "states[5].kernel": [
+    "5.kernel": [
         {
-            "Lookahead": "states[5].kernel",
+            "Lookahead": "5.kernel",
             "Production": ""
         },
         {
@@ -97,9 +97,9 @@
             "Production": "output -> ( . id_list )"
         }
     ],
-    "states[6].kernel": [
+    "6.kernel": [
         {
-            "Lookahead": "states[6].kernel",
+            "Lookahead": "6.kernel",
             "Production": ""
         },
         {
@@ -111,9 +111,9 @@
             "Production": "P -> program id output ; . declarations subprogram_declaration begin optional_statment end."
         }
     ],
-    "states[6].epsilon": [
+    "6.epsilon": [
         {
-            "Lookahead": "states[6].epsilon",
+            "Lookahead": "6.epsilon",
             "Production": ""
         },
         {
@@ -125,9 +125,9 @@
             "Production": "declarations -> ."
         }
     ],
-    "states[7].kernel": [
+    "7.kernel": [
         {
-            "Lookahead": "states[7].kernel",
+            "Lookahead": "7.kernel",
             "Production": ""
         },
         {
@@ -143,9 +143,9 @@
             "Production": "id_list -> id_list . , id"
         }
     ],
-    "states[8].kernel": [
+    "8.kernel": [
         {
-            "Lookahead": "states[8].kernel",
+            "Lookahead": "8.kernel",
             "Production": ""
         },
         {
@@ -157,9 +157,9 @@
             "Production": "id_list -> id ."
         }
     ],
-    "states[9].kernel": [
+    "9.kernel": [
         {
-            "Lookahead": "states[9].kernel",
+            "Lookahead": "9.kernel",
             "Production": ""
         },
         {
@@ -175,9 +175,9 @@
             "Production": "declarations -> declarations . var id_list : type ;"
         }
     ],
-    "states[9].epsilon": [
+    "9.epsilon": [
         {
-            "Lookahead": "states[9].epsilon",
+            "Lookahead": "9.epsilon",
             "Production": ""
         },
         {
@@ -189,9 +189,9 @@
             "Production": "subprogram_declaration -> ."
         }
     ],
-    "states[10].kernel": [
+    "10.kernel": [
         {
-            "Lookahead": "states[10].kernel",
+            "Lookahead": "10.kernel",
             "Production": ""
         },
         {
@@ -203,9 +203,9 @@
             "Production": "id_list -> id_list , . id"
         }
     ],
-    "states[11].kernel": [
+    "11.kernel": [
         {
-            "Lookahead": "states[11].kernel",
+            "Lookahead": "11.kernel",
             "Production": ""
         },
         {
@@ -217,9 +217,9 @@
             "Production": "output -> ( id_list ) ."
         }
     ],
-    "states[12].kernel": [
+    "12.kernel": [
         {
-            "Lookahead": "states[12].kernel",
+            "Lookahead": "12.kernel",
             "Production": ""
         },
         {
@@ -231,9 +231,9 @@
             "Production": "declarations -> declarations var . id_list : type ;"
         }
     ],
-    "states[13].kernel": [
+    "13.kernel": [
         {
-            "Lookahead": "states[13].kernel",
+            "Lookahead": "13.kernel",
             "Production": ""
         },
         {
@@ -245,9 +245,9 @@
             "Production": "P -> program id output ; declarations subprogram_declaration . begin optional_statment end."
         }
     ],
-    "states[14].kernel": [
+    "14.kernel": [
         {
-            "Lookahead": "states[14].kernel",
+            "Lookahead": "14.kernel",
             "Production": ""
         },
         {
@@ -259,9 +259,9 @@
             "Production": "subprogram_declaration -> subprogram_declarations . subprogram_declaration ;"
         }
     ],
-    "states[14].epsilon": [
+    "14.epsilon": [
         {
-            "Lookahead": "states[14].epsilon",
+            "Lookahead": "14.epsilon",
             "Production": ""
         },
         {
@@ -273,9 +273,9 @@
             "Production": "subprogram_declaration -> ."
         }
     ],
-    "states[15].kernel": [
+    "15.kernel": [
         {
-            "Lookahead": "states[15].kernel",
+            "Lookahead": "15.kernel",
             "Production": ""
         },
         {
@@ -287,9 +287,9 @@
             "Production": "subprogram_declarations -> supprogram_head . declarations compound_statment"
         }
     ],
-    "states[15].epsilon": [
+    "15.epsilon": [
         {
-            "Lookahead": "states[15].epsilon",
+            "Lookahead": "15.epsilon",
             "Production": ""
         },
         {
@@ -301,9 +301,9 @@
             "Production": "declarations -> ."
         }
     ],
-    "states[16].kernel": [
+    "16.kernel": [
         {
-            "Lookahead": "states[16].kernel",
+            "Lookahead": "16.kernel",
             "Production": ""
         },
         {
@@ -315,9 +315,9 @@
             "Production": "supprogram_head -> function . id arguments : standard_type ;"
         }
     ],
-    "states[17].kernel": [
+    "17.kernel": [
         {
-            "Lookahead": "states[17].kernel",
+            "Lookahead": "17.kernel",
             "Production": ""
         },
         {
@@ -329,9 +329,9 @@
             "Production": "supprogram_head -> procedure . id arguments ;"
         }
     ],
-    "states[18].kernel": [
+    "18.kernel": [
         {
-            "Lookahead": "states[18].kernel",
+            "Lookahead": "18.kernel",
             "Production": ""
         },
         {
@@ -343,9 +343,9 @@
             "Production": "id_list -> id_list , id ."
         }
     ],
-    "states[19].kernel": [
+    "19.kernel": [
         {
-            "Lookahead": "states[19].kernel",
+            "Lookahead": "19.kernel",
             "Production": ""
         },
         {
@@ -361,9 +361,9 @@
             "Production": "id_list -> id_list . , id"
         }
     ],
-    "states[20].kernel": [
+    "20.kernel": [
         {
-            "Lookahead": "states[20].kernel",
+            "Lookahead": "20.kernel",
             "Production": ""
         },
         {
@@ -375,9 +375,9 @@
             "Production": "P -> program id output ; declarations subprogram_declaration begin . optional_statment end."
         }
     ],
-    "states[20].epsilon": [
+    "20.epsilon": [
         {
-            "Lookahead": "states[20].epsilon",
+            "Lookahead": "20.epsilon",
             "Production": ""
         },
         {
@@ -389,9 +389,9 @@
             "Production": "optional_statment -> ."
         }
     ],
-    "states[21].kernel": [
+    "21.kernel": [
         {
-            "Lookahead": "states[21].kernel",
+            "Lookahead": "21.kernel",
             "Production": ""
         },
         {
@@ -403,9 +403,9 @@
             "Production": "subprogram_declaration -> subprogram_declarations subprogram_declaration . ;"
         }
     ],
-    "states[22].kernel": [
+    "22.kernel": [
         {
-            "Lookahead": "states[22].kernel",
+            "Lookahead": "22.kernel",
             "Production": ""
         },
         {
@@ -421,9 +421,9 @@
             "Production": "declarations -> declarations . var id_list : type ;"
         }
     ],
-    "states[23].kernel": [
+    "23.kernel": [
         {
-            "Lookahead": "states[23].kernel",
+            "Lookahead": "23.kernel",
             "Production": ""
         },
         {
@@ -435,9 +435,9 @@
             "Production": "supprogram_head -> function id . arguments : standard_type ;"
         }
     ],
-    "states[23].epsilon": [
+    "23.epsilon": [
         {
-            "Lookahead": "states[23].epsilon",
+            "Lookahead": "23.epsilon",
             "Production": ""
         },
         {
@@ -449,9 +449,9 @@
             "Production": "arguments -> ."
         }
     ],
-    "states[24].kernel": [
+    "24.kernel": [
         {
-            "Lookahead": "states[24].kernel",
+            "Lookahead": "24.kernel",
             "Production": ""
         },
         {
@@ -463,9 +463,9 @@
             "Production": "supprogram_head -> procedure id . arguments ;"
         }
     ],
-    "states[24].epsilon": [
+    "24.epsilon": [
         {
-            "Lookahead": "states[24].epsilon",
+            "Lookahead": "24.epsilon",
             "Production": ""
         },
         {
@@ -477,9 +477,9 @@
             "Production": "arguments -> ."
         }
     ],
-    "states[25].kernel": [
+    "25.kernel": [
         {
-            "Lookahead": "states[25].kernel",
+            "Lookahead": "25.kernel",
             "Production": ""
         },
         {
@@ -491,9 +491,9 @@
             "Production": "declarations -> declarations var id_list : . type ;"
         }
     ],
-    "states[26].kernel": [
+    "26.kernel": [
         {
-            "Lookahead": "states[26].kernel",
+            "Lookahead": "26.kernel",
             "Production": ""
         },
         {
@@ -505,9 +505,9 @@
             "Production": "P -> program id output ; declarations subprogram_declaration begin optional_statment . end."
         }
     ],
-    "states[27].kernel": [
+    "27.kernel": [
         {
-            "Lookahead": "states[27].kernel",
+            "Lookahead": "27.kernel",
             "Production": ""
         },
         {
@@ -523,9 +523,9 @@
             "Production": "statment_list -> statment_list . ; optional_statment"
         }
     ],
-    "states[28].kernel": [
+    "28.kernel": [
         {
-            "Lookahead": "states[28].kernel",
+            "Lookahead": "28.kernel",
             "Production": ""
         },
         {
@@ -537,9 +537,9 @@
             "Production": "statment_list -> statment ."
         }
     ],
-    "states[29].kernel": [
+    "29.kernel": [
         {
-            "Lookahead": "states[29].kernel",
+            "Lookahead": "29.kernel",
             "Production": ""
         },
         {
@@ -551,9 +551,9 @@
             "Production": "statment -> varible . := expr"
         }
     ],
-    "states[30].kernel": [
+    "30.kernel": [
         {
-            "Lookahead": "states[30].kernel",
+            "Lookahead": "30.kernel",
             "Production": ""
         },
         {
@@ -565,9 +565,9 @@
             "Production": "statment -> procedure_statment ."
         }
     ],
-    "states[31].kernel": [
+    "31.kernel": [
         {
-            "Lookahead": "states[31].kernel",
+            "Lookahead": "31.kernel",
             "Production": ""
         },
         {
@@ -579,9 +579,9 @@
             "Production": "statment -> compound_statment ."
         }
     ],
-    "states[32].kernel": [
+    "32.kernel": [
         {
-            "Lookahead": "states[32].kernel",
+            "Lookahead": "32.kernel",
             "Production": ""
         },
         {
@@ -597,9 +597,9 @@
             "Production": "statment -> if . expr then statment else statment"
         }
     ],
-    "states[33].kernel": [
+    "33.kernel": [
         {
-            "Lookahead": "states[33].kernel",
+            "Lookahead": "33.kernel",
             "Production": ""
         },
         {
@@ -611,9 +611,9 @@
             "Production": "statment -> while . expr do statment"
         }
     ],
-    "states[34].kernel": [
+    "34.kernel": [
         {
-            "Lookahead": "states[34].kernel",
+            "Lookahead": "34.kernel",
             "Production": ""
         },
         {
@@ -625,9 +625,9 @@
             "Production": "statment -> for . varible := expr st_for st_for2 do statment"
         }
     ],
-    "states[35].kernel": [
+    "35.kernel": [
         {
-            "Lookahead": "states[35].kernel",
+            "Lookahead": "35.kernel",
             "Production": ""
         },
         {
@@ -651,9 +651,9 @@
             "Production": "procedure_statment -> id . ( expr_list )"
         }
     ],
-    "states[36].kernel": [
+    "36.kernel": [
         {
-            "Lookahead": "states[36].kernel",
+            "Lookahead": "36.kernel",
             "Production": ""
         },
         {
@@ -665,9 +665,9 @@
             "Production": "compound_statment -> begin . optional_statment end"
         }
     ],
-    "states[36].epsilon": [
+    "36.epsilon": [
         {
-            "Lookahead": "states[36].epsilon",
+            "Lookahead": "36.epsilon",
             "Production": ""
         },
         {
@@ -679,9 +679,9 @@
             "Production": "optional_statment -> ."
         }
     ],
-    "states[37].kernel": [
+    "37.kernel": [
         {
-            "Lookahead": "states[37].kernel",
+            "Lookahead": "37.kernel",
             "Production": ""
         },
         {
@@ -693,9 +693,9 @@
             "Production": "subprogram_declaration -> subprogram_declarations subprogram_declaration ; ."
         }
     ],
-    "states[38].kernel": [
+    "38.kernel": [
         {
-            "Lookahead": "states[38].kernel",
+            "Lookahead": "38.kernel",
             "Production": ""
         },
         {
@@ -707,9 +707,9 @@
             "Production": "subprogram_declarations -> supprogram_head declarations compound_statment ."
         }
     ],
-    "states[39].kernel": [
+    "39.kernel": [
         {
-            "Lookahead": "states[39].kernel",
+            "Lookahead": "39.kernel",
             "Production": ""
         },
         {
@@ -721,9 +721,9 @@
             "Production": "supprogram_head -> function id arguments . : standard_type ;"
         }
     ],
-    "states[40].kernel": [
+    "40.kernel": [
         {
-            "Lookahead": "states[40].kernel",
+            "Lookahead": "40.kernel",
             "Production": ""
         },
         {
@@ -735,9 +735,9 @@
             "Production": "arguments -> ( . parameter_list )"
         }
     ],
-    "states[41].kernel": [
+    "41.kernel": [
         {
-            "Lookahead": "states[41].kernel",
+            "Lookahead": "41.kernel",
             "Production": ""
         },
         {
@@ -749,9 +749,9 @@
             "Production": "supprogram_head -> procedure id arguments . ;"
         }
     ],
-    "states[42].kernel": [
+    "42.kernel": [
         {
-            "Lookahead": "states[42].kernel",
+            "Lookahead": "42.kernel",
             "Production": ""
         },
         {
@@ -763,9 +763,9 @@
             "Production": "declarations -> declarations var id_list : type . ;"
         }
     ],
-    "states[43].kernel": [
+    "43.kernel": [
         {
-            "Lookahead": "states[43].kernel",
+            "Lookahead": "43.kernel",
             "Production": ""
         },
         {
@@ -777,9 +777,9 @@
             "Production": "type -> standard_type ."
         }
     ],
-    "states[44].kernel": [
+    "44.kernel": [
         {
-            "Lookahead": "states[44].kernel",
+            "Lookahead": "44.kernel",
             "Production": ""
         },
         {
@@ -791,9 +791,9 @@
             "Production": "type -> array . [ int .. int ] of standard_type"
         }
     ],
-    "states[45].kernel": [
+    "45.kernel": [
         {
-            "Lookahead": "states[45].kernel",
+            "Lookahead": "45.kernel",
             "Production": ""
         },
         {
@@ -805,9 +805,9 @@
             "Production": "standard_type -> integer ."
         }
     ],
-    "states[46].kernel": [
+    "46.kernel": [
         {
-            "Lookahead": "states[46].kernel",
+            "Lookahead": "46.kernel",
             "Production": ""
         },
         {
@@ -819,9 +819,9 @@
             "Production": "standard_type -> real ."
         }
     ],
-    "states[47].kernel": [
+    "47.kernel": [
         {
-            "Lookahead": "states[47].kernel",
+            "Lookahead": "47.kernel",
             "Production": ""
         },
         {
@@ -833,9 +833,9 @@
             "Production": "standard_type -> string ."
         }
     ],
-    "states[48].kernel": [
+    "48.kernel": [
         {
-            "Lookahead": "states[48].kernel",
+            "Lookahead": "48.kernel",
             "Production": ""
         },
         {
@@ -847,9 +847,9 @@
             "Production": "standard_type -> boolean ."
         }
     ],
-    "states[49].kernel": [
+    "49.kernel": [
         {
-            "Lookahead": "states[49].kernel",
+            "Lookahead": "49.kernel",
             "Production": ""
         },
         {
@@ -861,9 +861,9 @@
             "Production": "P -> program id output ; declarations subprogram_declaration begin optional_statment end. ."
         }
     ],
-    "states[50].kernel": [
+    "50.kernel": [
         {
-            "Lookahead": "states[50].kernel",
+            "Lookahead": "50.kernel",
             "Production": ""
         },
         {
@@ -875,9 +875,9 @@
             "Production": "statment_list -> statment_list ; . optional_statment"
         }
     ],
-    "states[50].epsilon": [
+    "50.epsilon": [
         {
-            "Lookahead": "states[50].epsilon",
+            "Lookahead": "50.epsilon",
             "Production": ""
         },
         {
@@ -889,9 +889,9 @@
             "Production": "optional_statment -> ."
         }
     ],
-    "states[51].kernel": [
+    "51.kernel": [
         {
-            "Lookahead": "states[51].kernel",
+            "Lookahead": "51.kernel",
             "Production": ""
         },
         {
@@ -903,9 +903,9 @@
             "Production": "statment -> varible := . expr"
         }
     ],
-    "states[52].kernel": [
+    "52.kernel": [
         {
-            "Lookahead": "states[52].kernel",
+            "Lookahead": "52.kernel",
             "Production": ""
         },
         {
@@ -921,9 +921,9 @@
             "Production": "statment -> if expr . then statment"
         }
     ],
-    "states[53].kernel": [
+    "53.kernel": [
         {
-            "Lookahead": "states[53].kernel",
+            "Lookahead": "53.kernel",
             "Production": ""
         },
         {
@@ -943,9 +943,9 @@
             "Production": "simple_expr -> simple_expr . addop term"
         }
     ],
-    "states[54].kernel": [
+    "54.kernel": [
         {
-            "Lookahead": "states[54].kernel",
+            "Lookahead": "54.kernel",
             "Production": ""
         },
         {
@@ -961,9 +961,9 @@
             "Production": "term -> term . mulop factor"
         }
     ],
-    "states[55].kernel": [
+    "55.kernel": [
         {
-            "Lookahead": "states[55].kernel",
+            "Lookahead": "55.kernel",
             "Production": ""
         },
         {
@@ -975,9 +975,9 @@
             "Production": "simple_expr -> sign . term"
         }
     ],
-    "states[56].kernel": [
+    "56.kernel": [
         {
-            "Lookahead": "states[56].kernel",
+            "Lookahead": "56.kernel",
             "Production": ""
         },
         {
@@ -989,9 +989,9 @@
             "Production": "term -> factor ."
         }
     ],
-    "states[57].kernel": [
+    "57.kernel": [
         {
-            "Lookahead": "states[57].kernel",
+            "Lookahead": "57.kernel",
             "Production": ""
         },
         {
@@ -1003,9 +1003,9 @@
             "Production": "sign -> + ."
         }
     ],
-    "states[58].kernel": [
+    "58.kernel": [
         {
-            "Lookahead": "states[58].kernel",
+            "Lookahead": "58.kernel",
             "Production": ""
         },
         {
@@ -1017,9 +1017,9 @@
             "Production": "sign -> - ."
         }
     ],
-    "states[59].kernel": [
+    "59.kernel": [
         {
-            "Lookahead": "states[59].kernel",
+            "Lookahead": "59.kernel",
             "Production": ""
         },
         {
@@ -1035,9 +1035,9 @@
             "Production": "factor -> id . ( expr_list )"
         }
     ],
-    "states[60].kernel": [
+    "60.kernel": [
         {
-            "Lookahead": "states[60].kernel",
+            "Lookahead": "60.kernel",
             "Production": ""
         },
         {
@@ -1049,9 +1049,9 @@
             "Production": "factor -> int ."
         }
     ],
-    "states[61].kernel": [
+    "61.kernel": [
         {
-            "Lookahead": "states[61].kernel",
+            "Lookahead": "61.kernel",
             "Production": ""
         },
         {
@@ -1063,9 +1063,9 @@
             "Production": "factor -> float ."
         }
     ],
-    "states[62].kernel": [
+    "62.kernel": [
         {
-            "Lookahead": "states[62].kernel",
+            "Lookahead": "62.kernel",
             "Production": ""
         },
         {
@@ -1077,9 +1077,9 @@
             "Production": "factor -> string ."
         }
     ],
-    "states[63].kernel": [
+    "63.kernel": [
         {
-            "Lookahead": "states[63].kernel",
+            "Lookahead": "63.kernel",
             "Production": ""
         },
         {
@@ -1091,9 +1091,9 @@
             "Production": "factor -> boolean ."
         }
     ],
-    "states[64].kernel": [
+    "64.kernel": [
         {
-            "Lookahead": "states[64].kernel",
+            "Lookahead": "64.kernel",
             "Production": ""
         },
         {
@@ -1105,9 +1105,9 @@
             "Production": "factor -> ( . expr )"
         }
     ],
-    "states[65].kernel": [
+    "65.kernel": [
         {
-            "Lookahead": "states[65].kernel",
+            "Lookahead": "65.kernel",
             "Production": ""
         },
         {
@@ -1119,9 +1119,9 @@
             "Production": "factor -> not . factor"
         }
     ],
-    "states[66].kernel": [
+    "66.kernel": [
         {
-            "Lookahead": "states[66].kernel",
+            "Lookahead": "66.kernel",
             "Production": ""
         },
         {
@@ -1133,9 +1133,9 @@
             "Production": "statment -> while expr . do statment"
         }
     ],
-    "states[67].kernel": [
+    "67.kernel": [
         {
-            "Lookahead": "states[67].kernel",
+            "Lookahead": "67.kernel",
             "Production": ""
         },
         {
@@ -1147,9 +1147,9 @@
             "Production": "statment -> for varible . := expr st_for st_for2 do statment"
         }
     ],
-    "states[68].kernel": [
+    "68.kernel": [
         {
-            "Lookahead": "states[68].kernel",
+            "Lookahead": "68.kernel",
             "Production": ""
         },
         {
@@ -1165,9 +1165,9 @@
             "Production": "varible -> id . [ expr ]"
         }
     ],
-    "states[69].kernel": [
+    "69.kernel": [
         {
-            "Lookahead": "states[69].kernel",
+            "Lookahead": "69.kernel",
             "Production": ""
         },
         {
@@ -1179,9 +1179,9 @@
             "Production": "procedure_statment -> id ( . expr_list )"
         }
     ],
-    "states[69].epsilon": [
+    "69.epsilon": [
         {
-            "Lookahead": "states[69].epsilon",
+            "Lookahead": "69.epsilon",
             "Production": ""
         },
         {
@@ -1193,9 +1193,9 @@
             "Production": "expr_list -> ."
         }
     ],
-    "states[70].kernel": [
+    "70.kernel": [
         {
-            "Lookahead": "states[70].kernel",
+            "Lookahead": "70.kernel",
             "Production": ""
         },
         {
@@ -1207,9 +1207,9 @@
             "Production": "varible -> id [ . expr ]"
         }
     ],
-    "states[71].kernel": [
+    "71.kernel": [
         {
-            "Lookahead": "states[71].kernel",
+            "Lookahead": "71.kernel",
             "Production": ""
         },
         {
@@ -1221,9 +1221,9 @@
             "Production": "compound_statment -> begin optional_statment . end"
         }
     ],
-    "states[72].kernel": [
+    "72.kernel": [
         {
-            "Lookahead": "states[72].kernel",
+            "Lookahead": "72.kernel",
             "Production": ""
         },
         {
@@ -1235,9 +1235,9 @@
             "Production": "supprogram_head -> function id arguments : . standard_type ;"
         }
     ],
-    "states[73].kernel": [
+    "73.kernel": [
         {
-            "Lookahead": "states[73].kernel",
+            "Lookahead": "73.kernel",
             "Production": ""
         },
         {
@@ -1253,9 +1253,9 @@
             "Production": "parameter_list -> parameter_list . ; id_list : type"
         }
     ],
-    "states[74].kernel": [
+    "74.kernel": [
         {
-            "Lookahead": "states[74].kernel",
+            "Lookahead": "74.kernel",
             "Production": ""
         },
         {
@@ -1271,9 +1271,9 @@
             "Production": "id_list -> id_list . , id"
         }
     ],
-    "states[75].kernel": [
+    "75.kernel": [
         {
-            "Lookahead": "states[75].kernel",
+            "Lookahead": "75.kernel",
             "Production": ""
         },
         {
@@ -1285,9 +1285,9 @@
             "Production": "supprogram_head -> procedure id arguments ; ."
         }
     ],
-    "states[76].kernel": [
+    "76.kernel": [
         {
-            "Lookahead": "states[76].kernel",
+            "Lookahead": "76.kernel",
             "Production": ""
         },
         {
@@ -1299,9 +1299,9 @@
             "Production": "declarations -> declarations var id_list : type ; ."
         }
     ],
-    "states[77].kernel": [
+    "77.kernel": [
         {
-            "Lookahead": "states[77].kernel",
+            "Lookahead": "77.kernel",
             "Production": ""
         },
         {
@@ -1313,9 +1313,9 @@
             "Production": "type -> array [ . int .. int ] of standard_type"
         }
     ],
-    "states[78].kernel": [
+    "78.kernel": [
         {
-            "Lookahead": "states[78].kernel",
+            "Lookahead": "78.kernel",
             "Production": ""
         },
         {
@@ -1327,9 +1327,9 @@
             "Production": "statment_list -> statment_list ; optional_statment ."
         }
     ],
-    "states[79].kernel": [
+    "79.kernel": [
         {
-            "Lookahead": "states[79].kernel",
+            "Lookahead": "79.kernel",
             "Production": ""
         },
         {
@@ -1341,9 +1341,9 @@
             "Production": "statment -> varible := expr ."
         }
     ],
-    "states[80].kernel": [
+    "80.kernel": [
         {
-            "Lookahead": "states[80].kernel",
+            "Lookahead": "80.kernel",
             "Production": ""
         },
         {
@@ -1359,9 +1359,9 @@
             "Production": "statment -> if expr then . statment else statment"
         }
     ],
-    "states[81].kernel": [
+    "81.kernel": [
         {
-            "Lookahead": "states[81].kernel",
+            "Lookahead": "81.kernel",
             "Production": ""
         },
         {
@@ -1373,9 +1373,9 @@
             "Production": "simple_expr -> simple_expr addop . term"
         }
     ],
-    "states[82].kernel": [
+    "82.kernel": [
         {
-            "Lookahead": "states[82].kernel",
+            "Lookahead": "82.kernel",
             "Production": ""
         },
         {
@@ -1387,9 +1387,9 @@
             "Production": "expr -> simple_expr relop . simple_expr"
         }
     ],
-    "states[83].kernel": [
+    "83.kernel": [
         {
-            "Lookahead": "states[83].kernel",
+            "Lookahead": "83.kernel",
             "Production": ""
         },
         {
@@ -1401,9 +1401,9 @@
             "Production": "relop -> < ."
         }
     ],
-    "states[84].kernel": [
+    "84.kernel": [
         {
-            "Lookahead": "states[84].kernel",
+            "Lookahead": "84.kernel",
             "Production": ""
         },
         {
@@ -1415,9 +1415,9 @@
             "Production": "relop -> <= ."
         }
     ],
-    "states[85].kernel": [
+    "85.kernel": [
         {
-            "Lookahead": "states[85].kernel",
+            "Lookahead": "85.kernel",
             "Production": ""
         },
         {
@@ -1429,9 +1429,9 @@
             "Production": "relop -> <> ."
         }
     ],
-    "states[86].kernel": [
+    "86.kernel": [
         {
-            "Lookahead": "states[86].kernel",
+            "Lookahead": "86.kernel",
             "Production": ""
         },
         {
@@ -1443,9 +1443,9 @@
             "Production": "relop -> = ."
         }
     ],
-    "states[87].kernel": [
+    "87.kernel": [
         {
-            "Lookahead": "states[87].kernel",
+            "Lookahead": "87.kernel",
             "Production": ""
         },
         {
@@ -1457,9 +1457,9 @@
             "Production": "relop -> >= ."
         }
     ],
-    "states[88].kernel": [
+    "88.kernel": [
         {
-            "Lookahead": "states[88].kernel",
+            "Lookahead": "88.kernel",
             "Production": ""
         },
         {
@@ -1471,9 +1471,9 @@
             "Production": "relop -> > ."
         }
     ],
-    "states[89].kernel": [
+    "89.kernel": [
         {
-            "Lookahead": "states[89].kernel",
+            "Lookahead": "89.kernel",
             "Production": ""
         },
         {
@@ -1485,9 +1485,9 @@
             "Production": "addop -> + ."
         }
     ],
-    "states[90].kernel": [
+    "90.kernel": [
         {
-            "Lookahead": "states[90].kernel",
+            "Lookahead": "90.kernel",
             "Production": ""
         },
         {
@@ -1499,9 +1499,9 @@
             "Production": "addop -> - ."
         }
     ],
-    "states[91].kernel": [
+    "91.kernel": [
         {
-            "Lookahead": "states[91].kernel",
+            "Lookahead": "91.kernel",
             "Production": ""
         },
         {
@@ -1513,9 +1513,9 @@
             "Production": "addop -> or ."
         }
     ],
-    "states[92].kernel": [
+    "92.kernel": [
         {
-            "Lookahead": "states[92].kernel",
+            "Lookahead": "92.kernel",
             "Production": ""
         },
         {
@@ -1527,9 +1527,9 @@
             "Production": "term -> term mulop . factor"
         }
     ],
-    "states[93].kernel": [
+    "93.kernel": [
         {
-            "Lookahead": "states[93].kernel",
+            "Lookahead": "93.kernel",
             "Production": ""
         },
         {
@@ -1541,9 +1541,9 @@
             "Production": "mulop -> * ."
         }
     ],
-    "states[94].kernel": [
+    "94.kernel": [
         {
-            "Lookahead": "states[94].kernel",
+            "Lookahead": "94.kernel",
             "Production": ""
         },
         {
@@ -1555,9 +1555,9 @@
             "Production": "mulop -> / ."
         }
     ],
-    "states[95].kernel": [
+    "95.kernel": [
         {
-            "Lookahead": "states[95].kernel",
+            "Lookahead": "95.kernel",
             "Production": ""
         },
         {
@@ -1569,9 +1569,9 @@
             "Production": "mulop -> div ."
         }
     ],
-    "states[96].kernel": [
+    "96.kernel": [
         {
-            "Lookahead": "states[96].kernel",
+            "Lookahead": "96.kernel",
             "Production": ""
         },
         {
@@ -1583,9 +1583,9 @@
             "Production": "mulop -> mod ."
         }
     ],
-    "states[97].kernel": [
+    "97.kernel": [
         {
-            "Lookahead": "states[97].kernel",
+            "Lookahead": "97.kernel",
             "Production": ""
         },
         {
@@ -1597,9 +1597,9 @@
             "Production": "mulop -> and ."
         }
     ],
-    "states[98].kernel": [
+    "98.kernel": [
         {
-            "Lookahead": "states[98].kernel",
+            "Lookahead": "98.kernel",
             "Production": ""
         },
         {
@@ -1615,9 +1615,9 @@
             "Production": "term -> term . mulop factor"
         }
     ],
-    "states[99].kernel": [
+    "99.kernel": [
         {
-            "Lookahead": "states[99].kernel",
+            "Lookahead": "99.kernel",
             "Production": ""
         },
         {
@@ -1629,9 +1629,9 @@
             "Production": "factor -> id ( . expr_list )"
         }
     ],
-    "states[99].epsilon": [
+    "99.epsilon": [
         {
-            "Lookahead": "states[99].epsilon",
+            "Lookahead": "99.epsilon",
             "Production": ""
         },
         {
@@ -1643,9 +1643,9 @@
             "Production": "expr_list -> ."
         }
     ],
-    "states[100].kernel": [
+    "100.kernel": [
         {
-            "Lookahead": "states[100].kernel",
+            "Lookahead": "100.kernel",
             "Production": ""
         },
         {
@@ -1657,9 +1657,9 @@
             "Production": "factor -> ( expr . )"
         }
     ],
-    "states[101].kernel": [
+    "101.kernel": [
         {
-            "Lookahead": "states[101].kernel",
+            "Lookahead": "101.kernel",
             "Production": ""
         },
         {
@@ -1671,9 +1671,9 @@
             "Production": "factor -> not factor ."
         }
     ],
-    "states[102].kernel": [
+    "102.kernel": [
         {
-            "Lookahead": "states[102].kernel",
+            "Lookahead": "102.kernel",
             "Production": ""
         },
         {
@@ -1685,9 +1685,9 @@
             "Production": "statment -> while expr do . statment"
         }
     ],
-    "states[103].kernel": [
+    "103.kernel": [
         {
-            "Lookahead": "states[103].kernel",
+            "Lookahead": "103.kernel",
             "Production": ""
         },
         {
@@ -1699,9 +1699,9 @@
             "Production": "statment -> for varible := . expr st_for st_for2 do statment"
         }
     ],
-    "states[104].kernel": [
+    "104.kernel": [
         {
-            "Lookahead": "states[104].kernel",
+            "Lookahead": "104.kernel",
             "Production": ""
         },
         {
@@ -1717,9 +1717,9 @@
             "Production": "expr_list -> expr_list . , expr"
         }
     ],
-    "states[105].kernel": [
+    "105.kernel": [
         {
-            "Lookahead": "states[105].kernel",
+            "Lookahead": "105.kernel",
             "Production": ""
         },
         {
@@ -1731,9 +1731,9 @@
             "Production": "expr_list -> expr ."
         }
     ],
-    "states[106].kernel": [
+    "106.kernel": [
         {
-            "Lookahead": "states[106].kernel",
+            "Lookahead": "106.kernel",
             "Production": ""
         },
         {
@@ -1745,9 +1745,9 @@
             "Production": "varible -> id [ expr . ]"
         }
     ],
-    "states[107].kernel": [
+    "107.kernel": [
         {
-            "Lookahead": "states[107].kernel",
+            "Lookahead": "107.kernel",
             "Production": ""
         },
         {
@@ -1759,9 +1759,9 @@
             "Production": "compound_statment -> begin optional_statment end ."
         }
     ],
-    "states[108].kernel": [
+    "108.kernel": [
         {
-            "Lookahead": "states[108].kernel",
+            "Lookahead": "108.kernel",
             "Production": ""
         },
         {
@@ -1773,9 +1773,9 @@
             "Production": "supprogram_head -> function id arguments : standard_type . ;"
         }
     ],
-    "states[109].kernel": [
+    "109.kernel": [
         {
-            "Lookahead": "states[109].kernel",
+            "Lookahead": "109.kernel",
             "Production": ""
         },
         {
@@ -1787,9 +1787,9 @@
             "Production": "parameter_list -> parameter_list ; . id_list : type"
         }
     ],
-    "states[110].kernel": [
+    "110.kernel": [
         {
-            "Lookahead": "states[110].kernel",
+            "Lookahead": "110.kernel",
             "Production": ""
         },
         {
@@ -1801,9 +1801,9 @@
             "Production": "arguments -> ( parameter_list ) ."
         }
     ],
-    "states[111].kernel": [
+    "111.kernel": [
         {
-            "Lookahead": "states[111].kernel",
+            "Lookahead": "111.kernel",
             "Production": ""
         },
         {
@@ -1815,9 +1815,9 @@
             "Production": "parameter_list -> id_list : . type"
         }
     ],
-    "states[112].kernel": [
+    "112.kernel": [
         {
-            "Lookahead": "states[112].kernel",
+            "Lookahead": "112.kernel",
             "Production": ""
         },
         {
@@ -1829,9 +1829,9 @@
             "Production": "type -> array [ int . .. int ] of standard_type"
         }
     ],
-    "states[113].kernel": [
+    "113.kernel": [
         {
-            "Lookahead": "states[113].kernel",
+            "Lookahead": "113.kernel",
             "Production": ""
         },
         {
@@ -1847,9 +1847,9 @@
             "Production": "statment -> if expr then statment ."
         }
     ],
-    "states[114].kernel": [
+    "114.kernel": [
         {
-            "Lookahead": "states[114].kernel",
+            "Lookahead": "114.kernel",
             "Production": ""
         },
         {
@@ -1865,9 +1865,9 @@
             "Production": "term -> term . mulop factor"
         }
     ],
-    "states[115].kernel": [
+    "115.kernel": [
         {
-            "Lookahead": "states[115].kernel",
+            "Lookahead": "115.kernel",
             "Production": ""
         },
         {
@@ -1883,9 +1883,9 @@
             "Production": "simple_expr -> simple_expr . addop term"
         }
     ],
-    "states[116].kernel": [
+    "116.kernel": [
         {
-            "Lookahead": "states[116].kernel",
+            "Lookahead": "116.kernel",
             "Production": ""
         },
         {
@@ -1897,9 +1897,9 @@
             "Production": "term -> term mulop factor ."
         }
     ],
-    "states[117].kernel": [
+    "117.kernel": [
         {
-            "Lookahead": "states[117].kernel",
+            "Lookahead": "117.kernel",
             "Production": ""
         },
         {
@@ -1915,9 +1915,9 @@
             "Production": "expr_list -> expr_list . , expr"
         }
     ],
-    "states[118].kernel": [
+    "118.kernel": [
         {
-            "Lookahead": "states[118].kernel",
+            "Lookahead": "118.kernel",
             "Production": ""
         },
         {
@@ -1929,9 +1929,9 @@
             "Production": "factor -> ( expr ) ."
         }
     ],
-    "states[119].kernel": [
+    "119.kernel": [
         {
-            "Lookahead": "states[119].kernel",
+            "Lookahead": "119.kernel",
             "Production": ""
         },
         {
@@ -1943,9 +1943,9 @@
             "Production": "statment -> while expr do statment ."
         }
     ],
-    "states[120].kernel": [
+    "120.kernel": [
         {
-            "Lookahead": "states[120].kernel",
+            "Lookahead": "120.kernel",
             "Production": ""
         },
         {
@@ -1957,9 +1957,9 @@
             "Production": "statment -> for varible := expr . st_for st_for2 do statment"
         }
     ],
-    "states[121].kernel": [
+    "121.kernel": [
         {
-            "Lookahead": "states[121].kernel",
+            "Lookahead": "121.kernel",
             "Production": ""
         },
         {
@@ -1971,9 +1971,9 @@
             "Production": "expr_list -> expr_list , . expr"
         }
     ],
-    "states[122].kernel": [
+    "122.kernel": [
         {
-            "Lookahead": "states[122].kernel",
+            "Lookahead": "122.kernel",
             "Production": ""
         },
         {
@@ -1985,9 +1985,9 @@
             "Production": "procedure_statment -> id ( expr_list ) ."
         }
     ],
-    "states[123].kernel": [
+    "123.kernel": [
         {
-            "Lookahead": "states[123].kernel",
+            "Lookahead": "123.kernel",
             "Production": ""
         },
         {
@@ -1999,9 +1999,9 @@
             "Production": "varible -> id [ expr ] ."
         }
     ],
-    "states[124].kernel": [
+    "124.kernel": [
         {
-            "Lookahead": "states[124].kernel",
+            "Lookahead": "124.kernel",
             "Production": ""
         },
         {
@@ -2013,9 +2013,9 @@
             "Production": "supprogram_head -> function id arguments : standard_type ; ."
         }
     ],
-    "states[125].kernel": [
+    "125.kernel": [
         {
-            "Lookahead": "states[125].kernel",
+            "Lookahead": "125.kernel",
             "Production": ""
         },
         {
@@ -2031,9 +2031,9 @@
             "Production": "id_list -> id_list . , id"
         }
     ],
-    "states[126].kernel": [
+    "126.kernel": [
         {
-            "Lookahead": "states[126].kernel",
+            "Lookahead": "126.kernel",
             "Production": ""
         },
         {
@@ -2045,9 +2045,9 @@
             "Production": "parameter_list -> id_list : type ."
         }
     ],
-    "states[127].kernel": [
+    "127.kernel": [
         {
-            "Lookahead": "states[127].kernel",
+            "Lookahead": "127.kernel",
             "Production": ""
         },
         {
@@ -2059,9 +2059,9 @@
             "Production": "type -> array [ int .. . int ] of standard_type"
         }
     ],
-    "states[128].kernel": [
+    "128.kernel": [
         {
-            "Lookahead": "states[128].kernel",
+            "Lookahead": "128.kernel",
             "Production": ""
         },
         {
@@ -2073,9 +2073,9 @@
             "Production": "statment -> if expr then statment else . statment"
         }
     ],
-    "states[129].kernel": [
+    "129.kernel": [
         {
-            "Lookahead": "states[129].kernel",
+            "Lookahead": "129.kernel",
             "Production": ""
         },
         {
@@ -2087,9 +2087,9 @@
             "Production": "factor -> id ( expr_list ) ."
         }
     ],
-    "states[130].kernel": [
+    "130.kernel": [
         {
-            "Lookahead": "states[130].kernel",
+            "Lookahead": "130.kernel",
             "Production": ""
         },
         {
@@ -2101,9 +2101,9 @@
             "Production": "statment -> for varible := expr st_for . st_for2 do statment"
         }
     ],
-    "states[131].kernel": [
+    "131.kernel": [
         {
-            "Lookahead": "states[131].kernel",
+            "Lookahead": "131.kernel",
             "Production": ""
         },
         {
@@ -2115,9 +2115,9 @@
             "Production": "st_for -> to ."
         }
     ],
-    "states[132].kernel": [
+    "132.kernel": [
         {
-            "Lookahead": "states[132].kernel",
+            "Lookahead": "132.kernel",
             "Production": ""
         },
         {
@@ -2129,9 +2129,9 @@
             "Production": "st_for -> downto ."
         }
     ],
-    "states[133].kernel": [
+    "133.kernel": [
         {
-            "Lookahead": "states[133].kernel",
+            "Lookahead": "133.kernel",
             "Production": ""
         },
         {
@@ -2143,9 +2143,9 @@
             "Production": "expr_list -> expr_list , expr ."
         }
     ],
-    "states[134].kernel": [
+    "134.kernel": [
         {
-            "Lookahead": "states[134].kernel",
+            "Lookahead": "134.kernel",
             "Production": ""
         },
         {
@@ -2157,9 +2157,9 @@
             "Production": "parameter_list -> parameter_list ; id_list : . type"
         }
     ],
-    "states[135].kernel": [
+    "135.kernel": [
         {
-            "Lookahead": "states[135].kernel",
+            "Lookahead": "135.kernel",
             "Production": ""
         },
         {
@@ -2171,9 +2171,9 @@
             "Production": "type -> array [ int .. int . ] of standard_type"
         }
     ],
-    "states[136].kernel": [
+    "136.kernel": [
         {
-            "Lookahead": "states[136].kernel",
+            "Lookahead": "136.kernel",
             "Production": ""
         },
         {
@@ -2185,9 +2185,9 @@
             "Production": "statment -> if expr then statment else statment ."
         }
     ],
-    "states[137].kernel": [
+    "137.kernel": [
         {
-            "Lookahead": "states[137].kernel",
+            "Lookahead": "137.kernel",
             "Production": ""
         },
         {
@@ -2199,9 +2199,9 @@
             "Production": "statment -> for varible := expr st_for st_for2 . do statment"
         }
     ],
-    "states[138].kernel": [
+    "138.kernel": [
         {
-            "Lookahead": "states[138].kernel",
+            "Lookahead": "138.kernel",
             "Production": ""
         },
         {
@@ -2213,9 +2213,9 @@
             "Production": "st_for2 -> id ."
         }
     ],
-    "states[139].kernel": [
+    "139.kernel": [
         {
-            "Lookahead": "states[139].kernel",
+            "Lookahead": "139.kernel",
             "Production": ""
         },
         {
@@ -2227,9 +2227,9 @@
             "Production": "st_for2 -> int ."
         }
     ],
-    "states[140].kernel": [
+    "140.kernel": [
         {
-            "Lookahead": "states[140].kernel",
+            "Lookahead": "140.kernel",
             "Production": ""
         },
         {
@@ -2241,9 +2241,9 @@
             "Production": "parameter_list -> parameter_list ; id_list : type ."
         }
     ],
-    "states[141].kernel": [
+    "141.kernel": [
         {
-            "Lookahead": "states[141].kernel",
+            "Lookahead": "141.kernel",
             "Production": ""
         },
         {
@@ -2255,9 +2255,9 @@
             "Production": "type -> array [ int .. int ] . of standard_type"
         }
     ],
-    "states[142].kernel": [
+    "142.kernel": [
         {
-            "Lookahead": "states[142].kernel",
+            "Lookahead": "142.kernel",
             "Production": ""
         },
         {
@@ -2269,9 +2269,9 @@
             "Production": "statment -> for varible := expr st_for st_for2 do . statment"
         }
     ],
-    "states[143].kernel": [
+    "143.kernel": [
         {
-            "Lookahead": "states[143].kernel",
+            "Lookahead": "143.kernel",
             "Production": ""
         },
         {
@@ -2283,9 +2283,9 @@
             "Production": "type -> array [ int .. int ] of . standard_type"
         }
     ],
-    "states[144].kernel": [
+    "144.kernel": [
         {
-            "Lookahead": "states[144].kernel",
+            "Lookahead": "144.kernel",
             "Production": ""
         },
         {
@@ -2297,9 +2297,9 @@
             "Production": "statment -> for varible := expr st_for st_for2 do statment ."
         }
     ],
-    "states[145].kernel": [
+    "145.kernel": [
         {
-            "Lookahead": "states[145].kernel",
+            "Lookahead": "145.kernel",
             "Production": ""
         },
         {
