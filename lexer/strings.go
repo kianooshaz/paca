@@ -4,7 +4,6 @@ import (
 	"io"
 
 	"github.com/kianooshaz/paca/tokens"
-	"github.com/kianooshaz/paca/unicodes"
 )
 
 func (l *lexer) lexString(r rune) {
@@ -17,16 +16,7 @@ func (l *lexer) lexString(r rune) {
 			panic("String not finished error")
 		}
 
-		if r == unicodes.Backslash {
-			rr, _, _ := l.buffer.ReadRune()
-			if rr == unicodes.SingleQuotation {
-				value += string(r) + string(rr)
-				continue
-			}
-			l.buffer.UnreadRune()
-		}
-
-		if r == unicodes.SingleQuotation {
+		if r == rune(39) {
 			break
 		}
 
