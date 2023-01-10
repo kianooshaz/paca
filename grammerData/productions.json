@@ -1,0 +1,2314 @@
+{
+    "states[0].kernel": [
+        {
+            "Lookahead": "states[0].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P' -> . P"
+        }
+    ],
+    "states[1].kernel": [
+        {
+            "Lookahead": "states[1].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P' -> P ."
+        }
+    ],
+    "states[2].kernel": [
+        {
+            "Lookahead": "states[2].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program . id output ; declarations subprogram_declaration begin optional_statment end."
+        }
+    ],
+    "states[3].kernel": [
+        {
+            "Lookahead": "states[3].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program id . output ; declarations subprogram_declaration begin optional_statment end."
+        }
+    ],
+    "states[3].epsilon": [
+        {
+            "Lookahead": "states[3].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ";",
+            "Production": "output -> ."
+        }
+    ],
+    "states[4].kernel": [
+        {
+            "Lookahead": "states[4].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program id output . ; declarations subprogram_declaration begin optional_statment end."
+        }
+    ],
+    "states[5].kernel": [
+        {
+            "Lookahead": "states[5].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ";",
+            "Production": "output -> ( . id_list )"
+        }
+    ],
+    "states[6].kernel": [
+        {
+            "Lookahead": "states[6].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program id output ; . declarations subprogram_declaration begin optional_statment end."
+        }
+    ],
+    "states[6].epsilon": [
+        {
+            "Lookahead": "states[6].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure begin var",
+            "Production": "declarations -> ."
+        }
+    ],
+    "states[7].kernel": [
+        {
+            "Lookahead": "states[7].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ";",
+            "Production": "output -> ( id_list . )"
+        },
+        {
+            "Lookahead": ") ,",
+            "Production": "id_list -> id_list . , id"
+        }
+    ],
+    "states[8].kernel": [
+        {
+            "Lookahead": "states[8].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") , :",
+            "Production": "id_list -> id ."
+        }
+    ],
+    "states[9].kernel": [
+        {
+            "Lookahead": "states[9].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program id output ; declarations . subprogram_declaration begin optional_statment end."
+        },
+        {
+            "Lookahead": "function procedure begin var",
+            "Production": "declarations -> declarations . var id_list : type ;"
+        }
+    ],
+    "states[9].epsilon": [
+        {
+            "Lookahead": "states[9].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "begin",
+            "Production": "subprogram_declaration -> ."
+        }
+    ],
+    "states[10].kernel": [
+        {
+            "Lookahead": "states[10].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") , :",
+            "Production": "id_list -> id_list , . id"
+        }
+    ],
+    "states[11].kernel": [
+        {
+            "Lookahead": "states[11].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ";",
+            "Production": "output -> ( id_list ) ."
+        }
+    ],
+    "states[12].kernel": [
+        {
+            "Lookahead": "states[12].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure begin var",
+            "Production": "declarations -> declarations var . id_list : type ;"
+        }
+    ],
+    "states[13].kernel": [
+        {
+            "Lookahead": "states[13].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program id output ; declarations subprogram_declaration . begin optional_statment end."
+        }
+    ],
+    "states[14].kernel": [
+        {
+            "Lookahead": "states[14].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "begin ;",
+            "Production": "subprogram_declaration -> subprogram_declarations . subprogram_declaration ;"
+        }
+    ],
+    "states[14].epsilon": [
+        {
+            "Lookahead": "states[14].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ";",
+            "Production": "subprogram_declaration -> ."
+        }
+    ],
+    "states[15].kernel": [
+        {
+            "Lookahead": "states[15].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure ;",
+            "Production": "subprogram_declarations -> supprogram_head . declarations compound_statment"
+        }
+    ],
+    "states[15].epsilon": [
+        {
+            "Lookahead": "states[15].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "begin var",
+            "Production": "declarations -> ."
+        }
+    ],
+    "states[16].kernel": [
+        {
+            "Lookahead": "states[16].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> function . id arguments : standard_type ;"
+        }
+    ],
+    "states[17].kernel": [
+        {
+            "Lookahead": "states[17].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> procedure . id arguments ;"
+        }
+    ],
+    "states[18].kernel": [
+        {
+            "Lookahead": "states[18].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") , :",
+            "Production": "id_list -> id_list , id ."
+        }
+    ],
+    "states[19].kernel": [
+        {
+            "Lookahead": "states[19].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure begin var",
+            "Production": "declarations -> declarations var id_list . : type ;"
+        },
+        {
+            "Lookahead": ": ,",
+            "Production": "id_list -> id_list . , id"
+        }
+    ],
+    "states[20].kernel": [
+        {
+            "Lookahead": "states[20].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program id output ; declarations subprogram_declaration begin . optional_statment end."
+        }
+    ],
+    "states[20].epsilon": [
+        {
+            "Lookahead": "states[20].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end.",
+            "Production": "optional_statment -> ."
+        }
+    ],
+    "states[21].kernel": [
+        {
+            "Lookahead": "states[21].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "begin ;",
+            "Production": "subprogram_declaration -> subprogram_declarations subprogram_declaration . ;"
+        }
+    ],
+    "states[22].kernel": [
+        {
+            "Lookahead": "states[22].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure ;",
+            "Production": "subprogram_declarations -> supprogram_head declarations . compound_statment"
+        },
+        {
+            "Lookahead": "begin var",
+            "Production": "declarations -> declarations . var id_list : type ;"
+        }
+    ],
+    "states[23].kernel": [
+        {
+            "Lookahead": "states[23].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> function id . arguments : standard_type ;"
+        }
+    ],
+    "states[23].epsilon": [
+        {
+            "Lookahead": "states[23].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ":",
+            "Production": "arguments -> ."
+        }
+    ],
+    "states[24].kernel": [
+        {
+            "Lookahead": "states[24].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> procedure id . arguments ;"
+        }
+    ],
+    "states[24].epsilon": [
+        {
+            "Lookahead": "states[24].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ";",
+            "Production": "arguments -> ."
+        }
+    ],
+    "states[25].kernel": [
+        {
+            "Lookahead": "states[25].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure begin var",
+            "Production": "declarations -> declarations var id_list : . type ;"
+        }
+    ],
+    "states[26].kernel": [
+        {
+            "Lookahead": "states[26].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program id output ; declarations subprogram_declaration begin optional_statment . end."
+        }
+    ],
+    "states[27].kernel": [
+        {
+            "Lookahead": "states[27].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. end ;",
+            "Production": "optional_statment -> statment_list ."
+        },
+        {
+            "Lookahead": "end. ; end",
+            "Production": "statment_list -> statment_list . ; optional_statment"
+        }
+    ],
+    "states[28].kernel": [
+        {
+            "Lookahead": "states[28].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end",
+            "Production": "statment_list -> statment ."
+        }
+    ],
+    "states[29].kernel": [
+        {
+            "Lookahead": "states[29].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> varible . := expr"
+        }
+    ],
+    "states[30].kernel": [
+        {
+            "Lookahead": "states[30].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> procedure_statment ."
+        }
+    ],
+    "states[31].kernel": [
+        {
+            "Lookahead": "states[31].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> compound_statment ."
+        }
+    ],
+    "states[32].kernel": [
+        {
+            "Lookahead": "states[32].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if . expr then statment"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if . expr then statment else statment"
+        }
+    ],
+    "states[33].kernel": [
+        {
+            "Lookahead": "states[33].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> while . expr do statment"
+        }
+    ],
+    "states[34].kernel": [
+        {
+            "Lookahead": "states[34].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> for . varible := expr st_for st_for2 do statment"
+        }
+    ],
+    "states[35].kernel": [
+        {
+            "Lookahead": "states[35].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ":=",
+            "Production": "varible -> id ."
+        },
+        {
+            "Lookahead": ":=",
+            "Production": "varible -> id . [ expr ]"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "procedure_statment -> id ."
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "procedure_statment -> id . ( expr_list )"
+        }
+    ],
+    "states[36].kernel": [
+        {
+            "Lookahead": "states[36].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; function procedure end else",
+            "Production": "compound_statment -> begin . optional_statment end"
+        }
+    ],
+    "states[36].epsilon": [
+        {
+            "Lookahead": "states[36].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end",
+            "Production": "optional_statment -> ."
+        }
+    ],
+    "states[37].kernel": [
+        {
+            "Lookahead": "states[37].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "begin ;",
+            "Production": "subprogram_declaration -> subprogram_declarations subprogram_declaration ; ."
+        }
+    ],
+    "states[38].kernel": [
+        {
+            "Lookahead": "states[38].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure ;",
+            "Production": "subprogram_declarations -> supprogram_head declarations compound_statment ."
+        }
+    ],
+    "states[39].kernel": [
+        {
+            "Lookahead": "states[39].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> function id arguments . : standard_type ;"
+        }
+    ],
+    "states[40].kernel": [
+        {
+            "Lookahead": "states[40].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ": ;",
+            "Production": "arguments -> ( . parameter_list )"
+        }
+    ],
+    "states[41].kernel": [
+        {
+            "Lookahead": "states[41].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> procedure id arguments . ;"
+        }
+    ],
+    "states[42].kernel": [
+        {
+            "Lookahead": "states[42].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure begin var",
+            "Production": "declarations -> declarations var id_list : type . ;"
+        }
+    ],
+    "states[43].kernel": [
+        {
+            "Lookahead": "states[43].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> standard_type ."
+        }
+    ],
+    "states[44].kernel": [
+        {
+            "Lookahead": "states[44].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> array . [ int .. int ] of standard_type"
+        }
+    ],
+    "states[45].kernel": [
+        {
+            "Lookahead": "states[45].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "standard_type -> integer ."
+        }
+    ],
+    "states[46].kernel": [
+        {
+            "Lookahead": "states[46].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "standard_type -> real ."
+        }
+    ],
+    "states[47].kernel": [
+        {
+            "Lookahead": "states[47].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "standard_type -> string ."
+        }
+    ],
+    "states[48].kernel": [
+        {
+            "Lookahead": "states[48].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "standard_type -> boolean ."
+        }
+    ],
+    "states[49].kernel": [
+        {
+            "Lookahead": "states[49].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "$",
+            "Production": "P -> program id output ; declarations subprogram_declaration begin optional_statment end. ."
+        }
+    ],
+    "states[50].kernel": [
+        {
+            "Lookahead": "states[50].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end",
+            "Production": "statment_list -> statment_list ; . optional_statment"
+        }
+    ],
+    "states[50].epsilon": [
+        {
+            "Lookahead": "states[50].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end",
+            "Production": "optional_statment -> ."
+        }
+    ],
+    "states[51].kernel": [
+        {
+            "Lookahead": "states[51].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> varible := . expr"
+        }
+    ],
+    "states[52].kernel": [
+        {
+            "Lookahead": "states[52].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if expr . then statment else statment"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if expr . then statment"
+        }
+    ],
+    "states[53].kernel": [
+        {
+            "Lookahead": "states[53].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then do end. ; end ) , ] else to downto",
+            "Production": "expr -> simple_expr ."
+        },
+        {
+            "Lookahead": "then do end. ; end ) , ] else to downto",
+            "Production": "expr -> simple_expr . relop simple_expr"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > + - or do end. ; end ) , ] else to downto",
+            "Production": "simple_expr -> simple_expr . addop term"
+        }
+    ],
+    "states[54].kernel": [
+        {
+            "Lookahead": "states[54].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > + - or do end. ; end ) , ] else to downto",
+            "Production": "simple_expr -> term ."
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "term -> term . mulop factor"
+        }
+    ],
+    "states[55].kernel": [
+        {
+            "Lookahead": "states[55].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > + - or do end. ; end ) , ] else to downto",
+            "Production": "simple_expr -> sign . term"
+        }
+    ],
+    "states[56].kernel": [
+        {
+            "Lookahead": "states[56].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "term -> factor ."
+        }
+    ],
+    "states[57].kernel": [
+        {
+            "Lookahead": "states[57].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "sign -> + ."
+        }
+    ],
+    "states[58].kernel": [
+        {
+            "Lookahead": "states[58].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "sign -> - ."
+        }
+    ],
+    "states[59].kernel": [
+        {
+            "Lookahead": "states[59].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> id ."
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> id . ( expr_list )"
+        }
+    ],
+    "states[60].kernel": [
+        {
+            "Lookahead": "states[60].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> int ."
+        }
+    ],
+    "states[61].kernel": [
+        {
+            "Lookahead": "states[61].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> float ."
+        }
+    ],
+    "states[62].kernel": [
+        {
+            "Lookahead": "states[62].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> string ."
+        }
+    ],
+    "states[63].kernel": [
+        {
+            "Lookahead": "states[63].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> boolean ."
+        }
+    ],
+    "states[64].kernel": [
+        {
+            "Lookahead": "states[64].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> ( . expr )"
+        }
+    ],
+    "states[65].kernel": [
+        {
+            "Lookahead": "states[65].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> not . factor"
+        }
+    ],
+    "states[66].kernel": [
+        {
+            "Lookahead": "states[66].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> while expr . do statment"
+        }
+    ],
+    "states[67].kernel": [
+        {
+            "Lookahead": "states[67].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> for varible . := expr st_for st_for2 do statment"
+        }
+    ],
+    "states[68].kernel": [
+        {
+            "Lookahead": "states[68].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ":=",
+            "Production": "varible -> id ."
+        },
+        {
+            "Lookahead": ":=",
+            "Production": "varible -> id . [ expr ]"
+        }
+    ],
+    "states[69].kernel": [
+        {
+            "Lookahead": "states[69].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "procedure_statment -> id ( . expr_list )"
+        }
+    ],
+    "states[69].epsilon": [
+        {
+            "Lookahead": "states[69].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ,",
+            "Production": "expr_list -> ."
+        }
+    ],
+    "states[70].kernel": [
+        {
+            "Lookahead": "states[70].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ":=",
+            "Production": "varible -> id [ . expr ]"
+        }
+    ],
+    "states[71].kernel": [
+        {
+            "Lookahead": "states[71].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; function procedure end else",
+            "Production": "compound_statment -> begin optional_statment . end"
+        }
+    ],
+    "states[72].kernel": [
+        {
+            "Lookahead": "states[72].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> function id arguments : . standard_type ;"
+        }
+    ],
+    "states[73].kernel": [
+        {
+            "Lookahead": "states[73].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ": ;",
+            "Production": "arguments -> ( parameter_list . )"
+        },
+        {
+            "Lookahead": ") ;",
+            "Production": "parameter_list -> parameter_list . ; id_list : type"
+        }
+    ],
+    "states[74].kernel": [
+        {
+            "Lookahead": "states[74].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ;",
+            "Production": "parameter_list -> id_list . : type"
+        },
+        {
+            "Lookahead": ": ,",
+            "Production": "id_list -> id_list . , id"
+        }
+    ],
+    "states[75].kernel": [
+        {
+            "Lookahead": "states[75].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> procedure id arguments ; ."
+        }
+    ],
+    "states[76].kernel": [
+        {
+            "Lookahead": "states[76].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "function procedure begin var",
+            "Production": "declarations -> declarations var id_list : type ; ."
+        }
+    ],
+    "states[77].kernel": [
+        {
+            "Lookahead": "states[77].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> array [ . int .. int ] of standard_type"
+        }
+    ],
+    "states[78].kernel": [
+        {
+            "Lookahead": "states[78].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end",
+            "Production": "statment_list -> statment_list ; optional_statment ."
+        }
+    ],
+    "states[79].kernel": [
+        {
+            "Lookahead": "states[79].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> varible := expr ."
+        }
+    ],
+    "states[80].kernel": [
+        {
+            "Lookahead": "states[80].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if expr then . statment"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if expr then . statment else statment"
+        }
+    ],
+    "states[81].kernel": [
+        {
+            "Lookahead": "states[81].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > + - or do end. ; end ) , ] else to downto",
+            "Production": "simple_expr -> simple_expr addop . term"
+        }
+    ],
+    "states[82].kernel": [
+        {
+            "Lookahead": "states[82].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then do end. ; end ) , ] else to downto",
+            "Production": "expr -> simple_expr relop . simple_expr"
+        }
+    ],
+    "states[83].kernel": [
+        {
+            "Lookahead": "states[83].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "+ - id int float string boolean ( not",
+            "Production": "relop -> < ."
+        }
+    ],
+    "states[84].kernel": [
+        {
+            "Lookahead": "states[84].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "+ - id int float string boolean ( not",
+            "Production": "relop -> <= ."
+        }
+    ],
+    "states[85].kernel": [
+        {
+            "Lookahead": "states[85].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "+ - id int float string boolean ( not",
+            "Production": "relop -> <> ."
+        }
+    ],
+    "states[86].kernel": [
+        {
+            "Lookahead": "states[86].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "+ - id int float string boolean ( not",
+            "Production": "relop -> = ."
+        }
+    ],
+    "states[87].kernel": [
+        {
+            "Lookahead": "states[87].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "+ - id int float string boolean ( not",
+            "Production": "relop -> >= ."
+        }
+    ],
+    "states[88].kernel": [
+        {
+            "Lookahead": "states[88].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "+ - id int float string boolean ( not",
+            "Production": "relop -> > ."
+        }
+    ],
+    "states[89].kernel": [
+        {
+            "Lookahead": "states[89].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "addop -> + ."
+        }
+    ],
+    "states[90].kernel": [
+        {
+            "Lookahead": "states[90].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "addop -> - ."
+        }
+    ],
+    "states[91].kernel": [
+        {
+            "Lookahead": "states[91].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "addop -> or ."
+        }
+    ],
+    "states[92].kernel": [
+        {
+            "Lookahead": "states[92].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "term -> term mulop . factor"
+        }
+    ],
+    "states[93].kernel": [
+        {
+            "Lookahead": "states[93].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "mulop -> * ."
+        }
+    ],
+    "states[94].kernel": [
+        {
+            "Lookahead": "states[94].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "mulop -> / ."
+        }
+    ],
+    "states[95].kernel": [
+        {
+            "Lookahead": "states[95].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "mulop -> div ."
+        }
+    ],
+    "states[96].kernel": [
+        {
+            "Lookahead": "states[96].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "mulop -> mod ."
+        }
+    ],
+    "states[97].kernel": [
+        {
+            "Lookahead": "states[97].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int float string boolean ( not",
+            "Production": "mulop -> and ."
+        }
+    ],
+    "states[98].kernel": [
+        {
+            "Lookahead": "states[98].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > + - or do end. ; end ) , ] else to downto",
+            "Production": "simple_expr -> sign term ."
+        },
+        {
+            "Lookahead": "then < <= <> = >= > + - or do end. ; end * / div mod and ) , ] else to downto",
+            "Production": "term -> term . mulop factor"
+        }
+    ],
+    "states[99].kernel": [
+        {
+            "Lookahead": "states[99].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> id ( . expr_list )"
+        }
+    ],
+    "states[99].epsilon": [
+        {
+            "Lookahead": "states[99].epsilon",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ,",
+            "Production": "expr_list -> ."
+        }
+    ],
+    "states[100].kernel": [
+        {
+            "Lookahead": "states[100].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> ( expr . )"
+        }
+    ],
+    "states[101].kernel": [
+        {
+            "Lookahead": "states[101].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> not factor ."
+        }
+    ],
+    "states[102].kernel": [
+        {
+            "Lookahead": "states[102].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> while expr do . statment"
+        }
+    ],
+    "states[103].kernel": [
+        {
+            "Lookahead": "states[103].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> for varible := . expr st_for st_for2 do statment"
+        }
+    ],
+    "states[104].kernel": [
+        {
+            "Lookahead": "states[104].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "procedure_statment -> id ( expr_list . )"
+        },
+        {
+            "Lookahead": ") ,",
+            "Production": "expr_list -> expr_list . , expr"
+        }
+    ],
+    "states[105].kernel": [
+        {
+            "Lookahead": "states[105].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ,",
+            "Production": "expr_list -> expr ."
+        }
+    ],
+    "states[106].kernel": [
+        {
+            "Lookahead": "states[106].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ":=",
+            "Production": "varible -> id [ expr . ]"
+        }
+    ],
+    "states[107].kernel": [
+        {
+            "Lookahead": "states[107].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; function procedure end else",
+            "Production": "compound_statment -> begin optional_statment end ."
+        }
+    ],
+    "states[108].kernel": [
+        {
+            "Lookahead": "states[108].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> function id arguments : standard_type . ;"
+        }
+    ],
+    "states[109].kernel": [
+        {
+            "Lookahead": "states[109].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ;",
+            "Production": "parameter_list -> parameter_list ; . id_list : type"
+        }
+    ],
+    "states[110].kernel": [
+        {
+            "Lookahead": "states[110].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ": ;",
+            "Production": "arguments -> ( parameter_list ) ."
+        }
+    ],
+    "states[111].kernel": [
+        {
+            "Lookahead": "states[111].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ;",
+            "Production": "parameter_list -> id_list : . type"
+        }
+    ],
+    "states[112].kernel": [
+        {
+            "Lookahead": "states[112].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> array [ int . .. int ] of standard_type"
+        }
+    ],
+    "states[113].kernel": [
+        {
+            "Lookahead": "states[113].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if expr then statment . else statment"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if expr then statment ."
+        }
+    ],
+    "states[114].kernel": [
+        {
+            "Lookahead": "states[114].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > + - or do end. ; end ) , ] else to downto",
+            "Production": "simple_expr -> simple_expr addop term ."
+        },
+        {
+            "Lookahead": "then < <= <> = >= > + - or do end. ; end ) , ] else * / div mod and to downto",
+            "Production": "term -> term . mulop factor"
+        }
+    ],
+    "states[115].kernel": [
+        {
+            "Lookahead": "states[115].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then do end. ; end ) , ] else to downto",
+            "Production": "expr -> simple_expr relop simple_expr ."
+        },
+        {
+            "Lookahead": "then do end. ; end ) , ] else + - or to downto",
+            "Production": "simple_expr -> simple_expr . addop term"
+        }
+    ],
+    "states[116].kernel": [
+        {
+            "Lookahead": "states[116].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "term -> term mulop factor ."
+        }
+    ],
+    "states[117].kernel": [
+        {
+            "Lookahead": "states[117].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> id ( expr_list . )"
+        },
+        {
+            "Lookahead": ") ,",
+            "Production": "expr_list -> expr_list . , expr"
+        }
+    ],
+    "states[118].kernel": [
+        {
+            "Lookahead": "states[118].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> ( expr ) ."
+        }
+    ],
+    "states[119].kernel": [
+        {
+            "Lookahead": "states[119].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> while expr do statment ."
+        }
+    ],
+    "states[120].kernel": [
+        {
+            "Lookahead": "states[120].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> for varible := expr . st_for st_for2 do statment"
+        }
+    ],
+    "states[121].kernel": [
+        {
+            "Lookahead": "states[121].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ,",
+            "Production": "expr_list -> expr_list , . expr"
+        }
+    ],
+    "states[122].kernel": [
+        {
+            "Lookahead": "states[122].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "procedure_statment -> id ( expr_list ) ."
+        }
+    ],
+    "states[123].kernel": [
+        {
+            "Lookahead": "states[123].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ":=",
+            "Production": "varible -> id [ expr ] ."
+        }
+    ],
+    "states[124].kernel": [
+        {
+            "Lookahead": "states[124].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "var begin",
+            "Production": "supprogram_head -> function id arguments : standard_type ; ."
+        }
+    ],
+    "states[125].kernel": [
+        {
+            "Lookahead": "states[125].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ;",
+            "Production": "parameter_list -> parameter_list ; id_list . : type"
+        },
+        {
+            "Lookahead": ": ,",
+            "Production": "id_list -> id_list . , id"
+        }
+    ],
+    "states[126].kernel": [
+        {
+            "Lookahead": "states[126].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ;",
+            "Production": "parameter_list -> id_list : type ."
+        }
+    ],
+    "states[127].kernel": [
+        {
+            "Lookahead": "states[127].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> array [ int .. . int ] of standard_type"
+        }
+    ],
+    "states[128].kernel": [
+        {
+            "Lookahead": "states[128].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if expr then statment else . statment"
+        }
+    ],
+    "states[129].kernel": [
+        {
+            "Lookahead": "states[129].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "then < <= <> = >= > * / div mod and + - or do end. ; end ) , ] else to downto",
+            "Production": "factor -> id ( expr_list ) ."
+        }
+    ],
+    "states[130].kernel": [
+        {
+            "Lookahead": "states[130].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> for varible := expr st_for . st_for2 do statment"
+        }
+    ],
+    "states[131].kernel": [
+        {
+            "Lookahead": "states[131].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int",
+            "Production": "st_for -> to ."
+        }
+    ],
+    "states[132].kernel": [
+        {
+            "Lookahead": "states[132].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "id int",
+            "Production": "st_for -> downto ."
+        }
+    ],
+    "states[133].kernel": [
+        {
+            "Lookahead": "states[133].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ,",
+            "Production": "expr_list -> expr_list , expr ."
+        }
+    ],
+    "states[134].kernel": [
+        {
+            "Lookahead": "states[134].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ;",
+            "Production": "parameter_list -> parameter_list ; id_list : . type"
+        }
+    ],
+    "states[135].kernel": [
+        {
+            "Lookahead": "states[135].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> array [ int .. int . ] of standard_type"
+        }
+    ],
+    "states[136].kernel": [
+        {
+            "Lookahead": "states[136].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> if expr then statment else statment ."
+        }
+    ],
+    "states[137].kernel": [
+        {
+            "Lookahead": "states[137].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> for varible := expr st_for st_for2 . do statment"
+        }
+    ],
+    "states[138].kernel": [
+        {
+            "Lookahead": "states[138].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "do",
+            "Production": "st_for2 -> id ."
+        }
+    ],
+    "states[139].kernel": [
+        {
+            "Lookahead": "states[139].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "do",
+            "Production": "st_for2 -> int ."
+        }
+    ],
+    "states[140].kernel": [
+        {
+            "Lookahead": "states[140].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": ") ;",
+            "Production": "parameter_list -> parameter_list ; id_list : type ."
+        }
+    ],
+    "states[141].kernel": [
+        {
+            "Lookahead": "states[141].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> array [ int .. int ] . of standard_type"
+        }
+    ],
+    "states[142].kernel": [
+        {
+            "Lookahead": "states[142].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> for varible := expr st_for st_for2 do . statment"
+        }
+    ],
+    "states[143].kernel": [
+        {
+            "Lookahead": "states[143].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> array [ int .. int ] of . standard_type"
+        }
+    ],
+    "states[144].kernel": [
+        {
+            "Lookahead": "states[144].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "end. ; end else",
+            "Production": "statment -> for varible := expr st_for st_for2 do statment ."
+        }
+    ],
+    "states[145].kernel": [
+        {
+            "Lookahead": "states[145].kernel",
+            "Production": ""
+        },
+        {
+            "Lookahead": "Lookahead",
+            "Production": "Production"
+        },
+        {
+            "Lookahead": "; )",
+            "Production": "type -> array [ int .. int ] of standard_type ."
+        }
+    ]
+}
