@@ -5,7 +5,7 @@ type Production struct {
 	body string
 }
 
-// !!!!!!!!!!!!!!!!!!!!!!!! Don't change this Rules !!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!! Don't change these rules !!!!!!!!!!!!!!!!!!!!!!!!!!!
 var Productions = map[string]Production{
 	"0": {
 		head: "P'",
