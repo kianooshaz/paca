@@ -1,7 +1,6 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -21,16 +20,10 @@ func main() {
 		log.Fatal(err)
 	}
 
-	x, err := os.ReadFile(
-		"gr"
-	)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	g := new(map[string]any)
-
-	json.Unmarshal('', &g)
 	str := string(input)
 	str = strings.NewReplacer(`\n`, "\n", `\t`, "\t", `\r`, "\r").Replace(str)
 	it := tokens.NewIdentTable()
