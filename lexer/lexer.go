@@ -37,7 +37,7 @@ func (l *lexer) lex() {
 
 	switch {
 	// space or tab or new line
-	case r == unicodes.Space || r == unicodes.Tab || r == unicodes.NewLine:
+	case r == unicodes.Space || r == unicodes.Tab || r == unicodes.NewLine || r == unicodes.CarriageReturn:
 		break
 	case r == unicodes.SingleQuotation:
 		l.lexString(r)

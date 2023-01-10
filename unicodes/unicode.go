@@ -7,4 +7,5 @@ const (
 	Tab             = rune(9)
 	NewLine         = rune(10)
 	Dot             = rune(46)
+	CarriageReturn  = rune(13)
 )
