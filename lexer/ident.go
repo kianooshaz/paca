@@ -4,6 +4,7 @@ import (
 	"unicode"
 
 	"github.com/kianooshaz/paca/tokens"
+	"github.com/kianooshaz/paca/unicodes"
 )
 
 func (l *lexer) lexIdent(r rune) {
@@ -21,7 +22,7 @@ func (l *lexer) lexIdent(r rune) {
 	if t, ok := tokens.Keywords[value]; ok {
 		if t == tokens.END {
 			r, _, _ = l.buffer.ReadRune()
-			if r == rune(46) {
+			if r == unicodes.Dot {
 				l.emit(tokens.ENDSTOP, "end.")
 				return
 			}

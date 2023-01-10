@@ -8,6 +8,7 @@ import (
 	"unicode"
 
 	"github.com/kianooshaz/paca/tokens"
+	"github.com/kianooshaz/paca/unicodes"
 )
 
 type lexer struct {
@@ -36,10 +37,9 @@ func (l *lexer) lex() {
 
 	switch {
 	// space or tab or new line
-	case r == rune(32) || r == rune(9) || r == rune(10):
+	case r == unicodes.Space || r == unicodes.Tab || r == unicodes.NewLine:
 		break
-	case r == rune(39):
-		// 39 = '
+	case r == unicodes.SingleQuotation:
 		l.lexString(r)
 	case unicode.IsDigit(r):
 		l.lexNumber(r)
