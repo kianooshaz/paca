@@ -7,6 +7,7 @@ import (
 	"strings"
 	"unicode"
 
+	"github.com/kianooshaz/paca/character"
 	"github.com/kianooshaz/paca/tokens"
 )
 
@@ -36,7 +37,7 @@ func (l *lexer) lex() {
 
 	switch {
 	// space or tab or new line
-	case r == rune(32) || r == rune(9) || r == rune(10):
+	case r == character.Space || r == character.Tab || r == character.NewLine || r == character.CarriageReturn:
 		break
 	case r == rune(39):
 		// 39 = '
