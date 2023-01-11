@@ -11,7 +11,11 @@ type Production struct {
 }
 
 func (p *Production) Print() {
-	fmt.Printf("%s → %s", p.Head, p.Body)
+	body := p.Body
+	if body == "" {
+		body = "ε"
+	}
+	fmt.Printf("%s → %s", p.Head, body)
 }
 
 func (p *Production) BodySize() int {
