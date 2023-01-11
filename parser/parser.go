@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/kianooshaz/paca/lexer"
+	"github.com/kianooshaz/paca/stack"
 )
 
 type Table map[string]map[string]string
@@ -11,13 +12,13 @@ type Table map[string]map[string]string
 type parser struct {
 	actionTable Table
 	gotoTable   Table
-	stack       Stack
+	stack       stack.Stack
 }
 
 func New(actionTable Table, gotoTable Table) *parser {
 	return &parser{
 		actionTable: actionTable,
-		stack:       NewStack(),
+		stack:       stack.New(),
 	}
 }
 

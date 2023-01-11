@@ -1,12 +1,10 @@
-package parser
+package stack
 
-import (
-	"errors"
-)
+import "errors"
 
 type Stack []string
 
-func NewStack() Stack {
+func New() Stack {
 	var stack Stack
 	return stack
 }
