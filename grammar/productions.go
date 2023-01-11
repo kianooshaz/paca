@@ -86,7 +86,7 @@ var Productions = map[string]Production{
 	},
 	"14": {
 		Head: "subprogram_declaration",
-		Body: "subprogram_declaration -> subprogram_declarations subprogram_declaration ;",
+		Body: "subprogram_declarations subprogram_declaration ;",
 	},
 	"15": {
 		Head: "subprogram_declaration",
