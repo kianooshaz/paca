@@ -10,12 +10,12 @@ type Production struct {
 	Body string
 }
 
-func (p *Production) Print() {
+func (p *Production) ToString() string {
 	body := p.Body
 	if body == "" {
 		body = "ε"
 	}
-	fmt.Printf("%s → %s", p.Head, body)
+	return fmt.Sprintf("%s → %s", p.Head, body)
 }
 
 func (p *Production) BodySize() int {

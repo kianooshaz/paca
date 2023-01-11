@@ -73,8 +73,8 @@ func (p *parser) Emit(production grammar.Production) {
 
 func (p *parser) PrintDerivation() {
 	for i := len(p.productions) - 1; i >= 0; i-- {
-		fmt.Printf("%d)\t", len(p.productions) - i)
-		p.productions[i].Print()
+		fmt.Printf("%d)\t", len(p.productions)-i)
+		fmt.Print(p.productions[i].ToString())
 		fmt.Print("\n")
 	}
 }
