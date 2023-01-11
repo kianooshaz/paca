@@ -14,7 +14,7 @@ func (p *parser) reduce(rule string) {
 		}
 	}
 	top, _ := p.stack.Top()
-	state, err := p.getGoto(top, production.Head)
+	state, err := p.getGoto(top, production)
 	if err != nil {
 		panic(err.Error())
 	}
