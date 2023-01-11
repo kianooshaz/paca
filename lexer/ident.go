@@ -1,8 +1,10 @@
 package lexer
 
 import (
+	"strings"
 	"unicode"
 
+	"github.com/kianooshaz/paca/character"
 	"github.com/kianooshaz/paca/tokens"
 )
 
@@ -18,18 +20,19 @@ func (l *Lexer) lexIdent(r rune) {
 		r, _, _ = l.buffer.ReadRune()
 	}
 
-	if t, ok := tokens.Keywords[value]; ok {
+	if t, ok := tokens.Keywords[strings.ToLower(value)]; ok {
 		if t == tokens.END {
 			r, _, _ = l.buffer.ReadRune()
-			if r == rune(46) {
-				l.emit(tokens.ENDSTOP, "end.")
+			if r == character.Dot {
+				l.emit(tokens.ENDSTOP, string(tokens.ENDSTOP))
 				return
 			}
 			l.buffer.UnreadRune()
 		}
 		l.emit(t, value)
-	} else {
-		id := l.identTable.GetID(value)
-		l.emit(tokens.IDENT, id)
+		return
 	}
+
+	id := l.identTable.GetID(value)
+	l.emit(tokens.IDENT, id)
 }
