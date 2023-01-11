@@ -35,12 +35,12 @@ func (p *parser) Parse(l *lexer.Lexer) {
 
 	for {
 		top, err := p.stack.Top()
-		if err != nil { // check stack is not empty
+		if err != nil { // check stack is empty
 			panic("parser error: " + err.Error())
 		}
 
-		action, err := p.getAction(top, token)
-		if err != nil { // check has action
+		action, err := p.getAction(top, token) // shift | reduce | Error
+		if err != nil {                        // check has action
 			message := fmt.Sprintf("parser error: no action. state: %s, token: %s", top, token)
 			panic(message)
 		}
@@ -49,8 +49,8 @@ func (p *parser) Parse(l *lexer.Lexer) {
 			break // accept
 		}
 
-		actionType := string(action[0])
-		actionValue := string(action[1:])
+		actionType := string(action[0])   // `s` for shift 							| `r` for reduce
+		actionValue := string(action[1:]) // `state number` for shift 	| `rule number` for reduce
 
 		// check action type is 'r' to reduce
 		if actionType == "r" {
