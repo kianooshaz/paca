@@ -46,4 +46,6 @@ func main() {
 
 	p := parser.New(actionTable, gotoTable)
 	p.Parse(l)
+	fmt.Println("########## right-most derivation ##########")
+	p.PrintDerivation()
 }

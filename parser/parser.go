@@ -3,6 +3,7 @@ package parser
 import (
 	"fmt"
 
+	"github.com/kianooshaz/paca/grammar"
 	"github.com/kianooshaz/paca/lexer"
 	"github.com/kianooshaz/paca/stack"
 )
@@ -13,12 +14,15 @@ type parser struct {
 	actionTable Table
 	gotoTable   Table
 	stack       stack.Stack
+	productions []grammar.Production
 }
 
 func New(actionTable Table, gotoTable Table) *parser {
 	return &parser{
 		actionTable: actionTable,
+		gotoTable:   gotoTable,
 		stack:       stack.New(),
+		productions: make([]grammar.Production, 0),
 	}
 }
 
@@ -35,7 +39,7 @@ func (p *parser) Parse(l *lexer.Lexer) {
 			panic("parser error: " + err.Error())
 		}
 
-		action, err := p.getAction(top, string(token.Type))
+		action, err := p.getAction(top, token)
 		if err != nil { // check has action
 			message := fmt.Sprintf("parser error: no action. state: %s, token: %s", top, token)
 			panic(message)
@@ -51,6 +55,7 @@ func (p *parser) Parse(l *lexer.Lexer) {
 		// check action type is 'r' to reduce
 		if actionType == "r" {
 			p.reduce(actionValue)
+			continue
 		}
 
 		// shift
@@ -60,5 +65,16 @@ func (p *parser) Parse(l *lexer.Lexer) {
 			panic("parser error: no token")
 		}
 	}
+}
 
+func (p *parser) Emit(production grammar.Production) {
+	p.productions = append(p.productions, production)
+}
+
+func (p *parser) PrintDerivation() {
+	for i := len(p.productions) - 1; i >= 0; i-- {
+		fmt.Printf("%d)\t", len(p.productions) - i)
+		p.productions[i].Print()
+		fmt.Print("\n")
+	}
 }

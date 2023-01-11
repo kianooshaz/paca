@@ -1,22 +1,22 @@
 package parser
 
 import (
-	"strings"
-
 	"github.com/kianooshaz/paca/grammar"
 )
 
 func (p *parser) reduce(rule string) {
 	production := grammar.Productions[rule]
-	production.Print()
-	bodySize := len(strings.Split(production.Body, " "))
-	for i := 0; i < bodySize; i++ {
+	p.Emit(production)
+	for i := 0; i < production.BodySize(); i++ {
 		_, err := p.stack.Pop()
 		if err != nil {
 			panic(err.Error())
 		}
 	}
-	top, _ := p.stack.Pop()
-	state, _ := p.getGoto(top, production.Head)
+	top, _ := p.stack.Top()
+	state, err := p.getGoto(top, production.Head)
+	if err != nil {
+		panic(err.Error())
+	}
 	p.stack.Push(state)
 }

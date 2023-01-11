@@ -1,6 +1,9 @@
 package grammar
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type Production struct {
 	Head string
@@ -8,7 +11,15 @@ type Production struct {
 }
 
 func (p *Production) Print() {
-	fmt.Printf("%s -> %s", p.Head, p.Body)
+	fmt.Printf("%s → %s", p.Head, p.Body)
+}
+
+func (p *Production) BodySize() int {
+	if p.Body == "" {
+		return 0
+	}
+	body := strings.Trim(p.Body, " ")
+	return len(strings.Split(body, " "))
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!! Don't change these rules !!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -26,8 +37,8 @@ var Productions = map[string]Production{
 		Body: "( id_list )",
 	},
 	"3": {
-		Head: "P",
-		Body: "program id . output ; declarations subprogram_declaration begin optional_statment end.",
+		Head: "output",
+		Body: "",
 	},
 	"4": {
 		Head: "id_list",

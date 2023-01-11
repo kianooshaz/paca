@@ -1,9 +1,13 @@
 package parser
 
-import "errors"
+import (
+	"errors"
 
-func (p *parser) getAction(state string, tokenValue string) (string, error) {
-	action := p.actionTable[state][tokenValue]
+	"github.com/kianooshaz/paca/tokens"
+)
+
+func (p *parser) getAction(state string, token tokens.Token) (string, error) {
+	action := p.actionTable[state][string(token.Type)]
 	if action == "" {
 		return action, errors.New("action not exist")
 	}

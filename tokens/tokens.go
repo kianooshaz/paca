@@ -1,7 +1,7 @@
 package tokens
 
 const (
-	EOF        Type = "EOF"
+	EOF        Type = "$"
 	MINUS      Type = "-"
 	NOT        Type = "not"
 	PLUS       Type = "+"

@@ -34,7 +34,7 @@ func New(source string, identTable *tokens.IdentTable) *Lexer {
 func (l *Lexer) lex() {
 	r, _, err := l.buffer.ReadRune()
 	if err == io.EOF {
-		l.emit(tokens.EOF, "$")
+		l.emit(tokens.EOF, "EOF")
 		return
 	}
 
