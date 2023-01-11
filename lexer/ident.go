@@ -6,7 +6,7 @@ import (
 	"github.com/kianooshaz/paca/tokens"
 )
 
-func (l *lexer) lexIdent(r rune) {
+func (l *Lexer) lexIdent(r rune) {
 	var value string
 	for {
 		if unicode.IsLetter(r) || unicode.IsDigit(r) {

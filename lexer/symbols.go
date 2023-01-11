@@ -7,7 +7,7 @@ import (
 	"github.com/kianooshaz/paca/tokens"
 )
 
-func (l *lexer) lexSymbol(r rune) {
+func (l *Lexer) lexSymbol(r rune) {
 
 	// one line comment with {}
 	if r == rune(123) {

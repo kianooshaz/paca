@@ -2,6 +2,7 @@ package lexer
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"io"
 	"strings"
@@ -11,27 +12,29 @@ import (
 	"github.com/kianooshaz/paca/tokens"
 )
 
-type lexer struct {
+type Lexer struct {
 	buffer     *bufio.Reader
 	identTable *tokens.IdentTable
 	tokens     []tokens.Token
+	nextToken  int
 }
 
-func New(source string, identTable *tokens.IdentTable) *lexer {
+func New(source string, identTable *tokens.IdentTable) *Lexer {
 	buffer := bufio.NewReader(strings.NewReader(source))
-	l := &lexer{
+	l := &Lexer{
 		buffer:     buffer,
 		identTable: identTable,
 		tokens:     make([]tokens.Token, 0),
+		nextToken:  0,
 	}
 	l.lex()
 	return l
 }
 
-func (l *lexer) lex() {
+func (l *Lexer) lex() {
 	r, _, err := l.buffer.ReadRune()
 	if err == io.EOF {
-		l.emit(tokens.EOF, "EOF")
+		l.emit(tokens.EOF, "$")
 		return
 	}
 
@@ -53,16 +56,25 @@ func (l *lexer) lex() {
 	l.lex()
 }
 
-func (l *lexer) emit(t tokens.Type, v string) {
+func (l *Lexer) emit(t tokens.Type, v string) {
 	l.tokens = append(l.tokens, tokens.Token{Type: t, Value: v})
 }
 
-func (l *lexer) PrintTokens() {
+func (l *Lexer) GetToken() (tokens.Token, error) {
+	if l.nextToken >= len(l.tokens) {
+		return tokens.Token{}, errors.New("no token")
+	}
+	token := l.tokens[l.nextToken]
+	l.nextToken++
+	return token, nil
+}
+
+func (l *Lexer) PrintTokens() {
 	for _, token := range l.tokens {
 		fmt.Println(token)
 	}
 }
 
-func (l *lexer) PrintIdentTable() {
+func (l *Lexer) PrintIdentTable() {
 	l.identTable.Print()
 }

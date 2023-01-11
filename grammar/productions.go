@@ -1,318 +1,324 @@
 package grammar
 
+import "fmt"
+
 type Production struct {
-	head string
-	body string
+	Head string
+	Body string
+}
+
+func (p *Production) Print() {
+	fmt.Printf("%s -> %s", p.Head, p.Body)
 }
 
 // !!!!!!!!!!!!!!!!!!!!!!!! Don't change these rules !!!!!!!!!!!!!!!!!!!!!!!!!!!
 var Productions = map[string]Production{
 	"0": {
-		head: "P'",
-		body: "P",
+		Head: "P'",
+		Body: "P",
 	},
 	"1": {
-		head: "P",
-		body: "program id output ; declarations subprogram_declaration begin optional_statment end.",
+		Head: "P",
+		Body: "program id output ; declarations subprogram_declaration begin optional_statment end.",
 	},
 	"2": {
-		head: "output",
-		body: "( id_list )",
+		Head: "output",
+		Body: "( id_list )",
 	},
 	"3": {
-		head: "P",
-		body: "program id . output ; declarations subprogram_declaration begin optional_statment end.",
+		Head: "P",
+		Body: "program id . output ; declarations subprogram_declaration begin optional_statment end.",
 	},
 	"4": {
-		head: "id_list",
-		body: "id",
+		Head: "id_list",
+		Body: "id",
 	},
 	"5": {
-		head: "id_list",
-		body: "id_list , id",
+		Head: "id_list",
+		Body: "id_list , id",
 	},
 	"6": {
-		head: "declarations",
-		body: "declarations var id_list : type ;",
+		Head: "declarations",
+		Body: "declarations var id_list : type ;",
 	},
 	"7": {
-		head: "declarations",
-		body: "",
+		Head: "declarations",
+		Body: "",
 	},
 	"8": {
-		head: "type",
-		body: "standard_type",
+		Head: "type",
+		Body: "standard_type",
 	},
 	"9": {
-		head: "type",
-		body: "array [ int .. int ] of standard_type",
+		Head: "type",
+		Body: "array [ int .. int ] of standard_type",
 	},
 	"10": {
-		head: "standard_type",
-		body: "integer",
+		Head: "standard_type",
+		Body: "integer",
 	},
 	"11": {
-		head: "standard_type",
-		body: "real",
+		Head: "standard_type",
+		Body: "real",
 	},
 	"12": {
-		head: "standard_type",
-		body: "string",
+		Head: "standard_type",
+		Body: "string",
 	},
 	"13": {
-		head: "standard_type",
-		body: "boolean",
+		Head: "standard_type",
+		Body: "boolean",
 	},
 	"14": {
-		head: "subprogram_declaration",
-		body: "subprogram_declaration -> subprogram_declarations subprogram_declaration ;",
+		Head: "subprogram_declaration",
+		Body: "subprogram_declaration -> subprogram_declarations subprogram_declaration ;",
 	},
 	"15": {
-		head: "subprogram_declaration",
-		body: "",
+		Head: "subprogram_declaration",
+		Body: "",
 	},
 	"16": {
-		head: "subprogram_declarations",
-		body: "supprogram_head declarations compound_statment",
+		Head: "subprogram_declarations",
+		Body: "supprogram_head declarations compound_statment",
 	},
 	"17": {
-		head: "supprogram_head",
-		body: "function id arguments : standard_type ;",
+		Head: "supprogram_head",
+		Body: "function id arguments : standard_type ;",
 	},
 	"18": {
-		head: "supprogram_head",
-		body: "procedure id arguments ;",
+		Head: "supprogram_head",
+		Body: "procedure id arguments ;",
 	},
 	"19": {
-		head: "arguments",
-		body: "( parameter_list )",
+		Head: "arguments",
+		Body: "( parameter_list )",
 	},
 	"20": {
-		head: "arguments",
-		body: "",
+		Head: "arguments",
+		Body: "",
 	},
 	"21": {
-		head: "parameter_list",
-		body: "id_list : type",
+		Head: "parameter_list",
+		Body: "id_list : type",
 	},
 	"22": {
-		head: "parameter_list",
-		body: "parameter_list ; id_list : type",
+		Head: "parameter_list",
+		Body: "parameter_list ; id_list : type",
 	},
 	"23": {
-		head: "compound_statment",
-		body: "begin optional_statment end",
+		Head: "compound_statment",
+		Body: "begin optional_statment end",
 	},
 	"24": {
-		head: "optional_statment",
-		body: "statment_list",
+		Head: "optional_statment",
+		Body: "statment_list",
 	},
 	"25": {
-		head: "optional_statment",
-		body: "",
+		Head: "optional_statment",
+		Body: "",
 	},
 	"26": {
-		head: "statment_list",
-		body: "statment",
+		Head: "statment_list",
+		Body: "statment",
 	},
 	"27": {
-		head: "statment_list",
-		body: "statment_list ; optional_statment",
+		Head: "statment_list",
+		Body: "statment_list ; optional_statment",
 	},
 	"28": {
-		head: "statment",
-		body: "varible := expr",
+		Head: "statment",
+		Body: "varible := expr",
 	},
 	"29": {
-		head: "statment",
-		body: "procedure_statment",
+		Head: "statment",
+		Body: "procedure_statment",
 	},
 	"30": {
-		head: "statment",
-		body: "compound_statment",
+		Head: "statment",
+		Body: "compound_statment",
 	},
 	"31": {
-		head: "statment",
-		body: "if expr then statment",
+		Head: "statment",
+		Body: "if expr then statment",
 	},
 	"32": {
-		head: "statment",
-		body: "if expr then statment else statment",
+		Head: "statment",
+		Body: "if expr then statment else statment",
 	},
 	"33": {
-		head: "statment",
-		body: "while expr do statment",
+		Head: "statment",
+		Body: "while expr do statment",
 	},
 	"34": {
-		head: "statment",
-		body: "for varible := expr st_for st_for2 do statment",
+		Head: "statment",
+		Body: "for varible := expr st_for st_for2 do statment",
 	},
 	"35": {
-		head: "st_for",
-		body: "to",
+		Head: "st_for",
+		Body: "to",
 	},
 	"36": {
-		head: "st_for",
-		body: "downto",
+		Head: "st_for",
+		Body: "downto",
 	},
 	"37": {
-		head: "st_for2",
-		body: "id",
+		Head: "st_for2",
+		Body: "id",
 	},
 	"38": {
-		head: "st_for2",
-		body: "int",
+		Head: "st_for2",
+		Body: "int",
 	},
 	"39": {
-		head: "varible",
-		body: "id",
+		Head: "varible",
+		Body: "id",
 	},
 	"40": {
-		head: "varible",
-		body: "id [ expr ]",
+		Head: "varible",
+		Body: "id [ expr ]",
 	},
 	"41": {
-		head: "procedure_statment",
-		body: "id",
+		Head: "procedure_statment",
+		Body: "id",
 	},
 	"42": {
-		head: "procedure_statment",
-		body: "id ( expr_list )",
+		Head: "procedure_statment",
+		Body: "id ( expr_list )",
 	},
 	"43": {
-		head: "expr_list",
-		body: "expr",
+		Head: "expr_list",
+		Body: "expr",
 	},
 	"44": {
-		head: "expr_list",
-		body: "expr_list , expr",
+		Head: "expr_list",
+		Body: "expr_list , expr",
 	},
 	"45": {
-		head: "expr_list",
-		body: "",
+		Head: "expr_list",
+		Body: "",
 	},
 	"46": {
-		head: "expr",
-		body: "simple_expr",
+		Head: "expr",
+		Body: "simple_expr",
 	},
 	"47": {
-		head: "expr",
-		body: "simple_expr relop simple_expr",
+		Head: "expr",
+		Body: "simple_expr relop simple_expr",
 	},
 	"48": {
-		head: "relop",
-		body: "<",
+		Head: "relop",
+		Body: "<",
 	},
 	"49": {
-		head: "relop",
-		body: "<=",
+		Head: "relop",
+		Body: "<=",
 	},
 	"50": {
-		head: "relop",
-		body: "<>",
+		Head: "relop",
+		Body: "<>",
 	},
 	"51": {
-		head: "relop",
-		body: "=",
+		Head: "relop",
+		Body: "=",
 	},
 	"52": {
-		head: "relop",
-		body: ">=",
+		Head: "relop",
+		Body: ">=",
 	},
 	"53": {
-		head: "relop",
-		body: ">",
+		Head: "relop",
+		Body: ">",
 	},
 	"54": {
-		head: "simple_expr",
-		body: "term",
+		Head: "simple_expr",
+		Body: "term",
 	},
 	"55": {
-		head: "simple_expr",
-		body: "sign term",
+		Head: "simple_expr",
+		Body: "sign term",
 	},
 	"56": {
-		head: "simple_expr",
-		body: "simple_expr addop term",
+		Head: "simple_expr",
+		Body: "simple_expr addop term",
 	},
 	"57": {
-		head: "addop",
-		body: "+",
+		Head: "addop",
+		Body: "+",
 	},
 	"58": {
-		head: "addop",
-		body: "-",
+		Head: "addop",
+		Body: "-",
 	},
 	"59": {
-		head: "addop",
-		body: "or",
+		Head: "addop",
+		Body: "or",
 	},
 	"60": {
-		head: "term",
-		body: "factor",
+		Head: "term",
+		Body: "factor",
 	},
 	"61": {
-		head: "term",
-		body: "term mulop factor",
+		Head: "term",
+		Body: "term mulop factor",
 	},
 	"62": {
-		head: "mulop",
-		body: "*",
+		Head: "mulop",
+		Body: "*",
 	},
 	"63": {
-		head: "mulop",
-		body: "/",
+		Head: "mulop",
+		Body: "/",
 	},
 	"64": {
-		head: "mulop",
-		body: "div",
+		Head: "mulop",
+		Body: "div",
 	},
 	"65": {
-		head: "mulop",
-		body: "mod",
+		Head: "mulop",
+		Body: "mod",
 	},
 	"66": {
-		head: "mulop",
-		body: "and",
+		Head: "mulop",
+		Body: "and",
 	},
 	"67": {
-		head: "factor",
-		body: "id",
+		Head: "factor",
+		Body: "id",
 	},
 	"68": {
-		head: "factor",
-		body: "id ( expr_list )",
+		Head: "factor",
+		Body: "id ( expr_list )",
 	},
 	"69": {
-		head: "factor",
-		body: "int",
+		Head: "factor",
+		Body: "int",
 	},
 	"70": {
-		head: "factor",
-		body: "float",
+		Head: "factor",
+		Body: "float",
 	},
 	"71": {
-		head: "factor",
-		body: "string",
+		Head: "factor",
+		Body: "string",
 	},
 	"72": {
-		head: "factor",
-		body: "boolean",
+		Head: "factor",
+		Body: "boolean",
 	},
 	"73": {
-		head: "factor",
-		body: "( expr )",
+		Head: "factor",
+		Body: "( expr )",
 	},
 	"74": {
-		head: "factor",
-		body: "not factor",
+		Head: "factor",
+		Body: "not factor",
 	},
 	"75": {
-		head: "sign",
-		body: "+",
+		Head: "sign",
+		Body: "+",
 	},
 	"76": {
-		head: "sign",
-		body: "-",
+		Head: "sign",
+		Body: "-",
 	},
 }

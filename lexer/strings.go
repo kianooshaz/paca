@@ -6,7 +6,7 @@ import (
 	"github.com/kianooshaz/paca/tokens"
 )
 
-func (l *lexer) lexString(r rune) {
+func (l *Lexer) lexString(r rune) {
 	var value string
 	var err error
 

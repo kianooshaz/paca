@@ -52,5 +52,6 @@ const (
 	SCIENTIFIC Type = "Scientific"
 	STRING     Type = "string"
 	BOOLEAN    Type = "boolean"
-	IDENT      Type = "ident"
+	IDENT      Type = "id"
+	DOLLAR     Type = "$"
 )

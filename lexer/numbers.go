@@ -6,7 +6,7 @@ import (
 	"github.com/kianooshaz/paca/tokens"
 )
 
-func (l *lexer) lexNumber(r rune) {
+func (l *Lexer) lexNumber(r rune) {
 	var token = tokens.INTEGER
 	var str string
 	for {
