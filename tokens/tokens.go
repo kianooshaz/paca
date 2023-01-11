@@ -35,7 +35,7 @@ const (
 	FUNCTION   Type = "function"
 	PROCEDURE  Type = "procedure"
 	REAL       Type = "real"
-	INTEGER    Type = "integer"
+	INTEGER    Type = "integer" // standard type
 	DOTDOT     Type = ".."
 	OF         Type = "of"
 	ARRAY      Type = "array"
