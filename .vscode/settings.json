@@ -1,3 +1,15 @@
 {
-    "cSpell.words": ["DOTDOT", "DOWNTO", "ENDSTOP", "kianooshaz", "paca"]
+    "cSpell.words": [
+        "addop",
+        "DOTDOT",
+        "DOWNTO",
+        "ENDSTOP",
+        "kianooshaz",
+        "mulop",
+        "paca",
+        "relop",
+        "statment",
+        "supprogram",
+        "varible"
+    ]
 }
