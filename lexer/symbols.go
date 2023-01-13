@@ -51,7 +51,7 @@ func (l *Lexer) lexSymbol(r rune) {
 			for {
 				r, _, err := l.buffer.ReadRune()
 				if err == io.EOF {
-					log.Fatalln("comment should be end with }")
+					log.Fatalln("comment should be end with *)")
 					return
 				}
 

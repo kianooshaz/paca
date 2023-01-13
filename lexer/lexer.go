@@ -42,7 +42,7 @@ func (l *Lexer) lex() {
 	// space or tab or new line
 	case r == character.Space || r == character.Tab || r == character.NewLine || r == character.CarriageReturn:
 		break
-	case r == rune(39):
+	case r == character.SingleQuotation:
 		// 39 = '
 		l.lexString(r)
 	case unicode.IsDigit(r):
