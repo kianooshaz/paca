@@ -29,7 +29,8 @@ func New(actionTable Table, gotoTable Table) *parser {
 func (p *parser) Parse(l *lexer.Lexer) {
 	token, err := l.GetToken()
 	if err != nil {
-		panic("parser error")
+		message := fmt.Sprintf("parser error, %s", err.Error())
+		panic(message)
 	}
 	p.stack.Push("0")
 
