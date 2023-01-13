@@ -3,6 +3,7 @@ package lexer
 import (
 	"io"
 
+	"github.com/kianooshaz/paca/character"
 	"github.com/kianooshaz/paca/tokens"
 )
 
@@ -16,7 +17,7 @@ func (l *Lexer) lexString(r rune) {
 			panic("String not finished error")
 		}
 
-		if r == rune(39) {
+		if r == character.SingleQuotation {
 			break
 		}
 
