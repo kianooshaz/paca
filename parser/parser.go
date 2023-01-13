@@ -63,7 +63,8 @@ func (p *parser) Parse(l *lexer.Lexer) {
 		p.shift(actionValue)
 		token, err = l.GetToken()
 		if err != nil { // check has token
-			panic("parser error: no token")
+			message := fmt.Sprintf("parser error, %s", err.Error())
+			panic(message)
 		}
 	}
 }
