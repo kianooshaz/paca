@@ -42,12 +42,12 @@ func (l *Lexer) lexNumber(r rune) {
 			}
 			l.buffer.UnreadRune()
 
-			if token == tokens.FLOAT || token == tokens.SCIENTIFIC {
+			if token == tokens.REAL || token == tokens.SCIENTIFIC {
 				l.buffer.UnreadRune()
 				break
 			}
 
-			token = tokens.FLOAT
+			token = tokens.REAL
 			str += string(r)
 		} else if unicode.IsDigit(r) {
 			str += string(r)
