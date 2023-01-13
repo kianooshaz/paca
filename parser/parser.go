@@ -32,7 +32,7 @@ func (p *parser) Parse(l *lexer.Lexer) {
 		message := fmt.Sprintf("parser error, %s", err.Error())
 		panic(message)
 	}
-	p.stack.Push("0")
+	p.stack.Push("0") // push state 0 into stack
 
 	for {
 		top, err := p.stack.Top()
