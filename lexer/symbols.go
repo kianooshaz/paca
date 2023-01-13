@@ -4,13 +4,14 @@ import (
 	"io"
 	"log"
 
+	"github.com/kianooshaz/paca/character"
 	"github.com/kianooshaz/paca/tokens"
 )
 
 func (l *Lexer) lexSymbol(r rune) {
 
 	// one line comment with {}
-	if r == rune(123) {
+	if r == character.LCurlyBrace {
 		for {
 			r, _, err := l.buffer.ReadRune()
 			if err == io.EOF {
@@ -18,16 +19,16 @@ func (l *Lexer) lexSymbol(r rune) {
 				return
 			}
 
-			if r == rune(125) {
+			if r == character.RCurlyBrace {
 				return
 			}
 		}
 	}
 
 	// one line comment with //
-	if r == rune(47) {
+	if r == character.Slash {
 		rr, _, _ := l.buffer.ReadRune()
-		if rr == rune(47) {
+		if rr == character.Slash {
 			// comment
 			l.buffer.ReadLine()
 			return
@@ -46,7 +47,7 @@ func (l *Lexer) lexSymbol(r rune) {
 		r, _, _ = l.buffer.ReadRune()
 
 		// multi line comment
-		if value == "(" && r == rune(42) {
+		if value == "(" && r == character.Star {
 			for {
 				r, _, err := l.buffer.ReadRune()
 				if err == io.EOF {
@@ -54,9 +55,9 @@ func (l *Lexer) lexSymbol(r rune) {
 					return
 				}
 
-				if r == rune(42) {
+				if r == character.Star {
 					r, _, _ = l.buffer.ReadRune()
-					if r == rune(41) {
+					if r == character.RParent {
 						return
 					}
 				}
